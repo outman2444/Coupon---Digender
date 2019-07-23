@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="couponDigender.comm" />
+        <module name="couponDigender.core" />
+        <module name="couponDigender.vc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="couponDigender.comm" target="1.8" />
+      <module name="couponDigender.core" target="1.8" />
+      <module name="couponDigender.vc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

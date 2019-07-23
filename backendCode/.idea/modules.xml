@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/backendCode.iml" filepath="$PROJECT_DIR$/.idea/backendCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comm/couponDigender.comm/couponDigender.comm.iml" filepath="$PROJECT_DIR$/comm/couponDigender.comm/couponDigender.comm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/couponDigender.core/couponDigender.core.iml" filepath="$PROJECT_DIR$/core/couponDigender.core/couponDigender.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vc/couponDigender.vc/couponDigender.vc.iml" filepath="$PROJECT_DIR$/vc/couponDigender.vc/couponDigender.vc.iml" />
+    </modules>
+  </component>
+</project>
