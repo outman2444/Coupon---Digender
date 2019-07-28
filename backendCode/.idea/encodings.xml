@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/comm/base.core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/comm/comm.core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/comm/couponDigender.comm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/comm/parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/core/couponDigender.core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/goods.core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/manage.core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/order.core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/promotion.core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vc/couponDigender.vc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vc/goods.vc/goods.vc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vc/manage.vc/manage.vc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vc/order.vc/order.vc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vc/promotion.vc/promotion.vc" charset="UTF-8" />
   </component>
 </project>

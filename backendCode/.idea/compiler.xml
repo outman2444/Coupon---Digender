@@ -6,15 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="couponDigender.comm" />
-        <module name="couponDigender.core" />
-        <module name="couponDigender.vc" />
+        <module name="base.core" />
+        <module name="comm.core" />
+        <module name="goods.core" />
+        <module name="goods.vc" />
+        <module name="manage.core" />
+        <module name="manage.vc" />
+        <module name="order.core" />
+        <module name="order.vc" />
+        <module name="promotion.core" />
+        <module name="promotion.vc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="base.core" target="1.8" />
+      <module name="comm.core" target="1.8" />
       <module name="couponDigender.comm" target="1.8" />
       <module name="couponDigender.core" target="1.8" />
       <module name="couponDigender.vc" target="1.8" />
+      <module name="goods.core" target="1.8" />
+      <module name="goods.vc" target="1.8" />
+      <module name="manage.core" target="1.8" />
+      <module name="manage.vc" target="1.8" />
+      <module name="order.core" target="1.8" />
+      <module name="order.vc" target="1.8" />
+      <module name="parent" target="1.8" />
+      <module name="promotion.core" target="1.8" />
+      <module name="promotion.vc" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -3,9 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/backendCode.iml" filepath="$PROJECT_DIR$/.idea/backendCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/comm/couponDigender.comm/couponDigender.comm.iml" filepath="$PROJECT_DIR$/comm/couponDigender.comm/couponDigender.comm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/core/couponDigender.core/couponDigender.core.iml" filepath="$PROJECT_DIR$/core/couponDigender.core/couponDigender.core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/vc/couponDigender.vc/couponDigender.vc.iml" filepath="$PROJECT_DIR$/vc/couponDigender.vc/couponDigender.vc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comm/base.core/base.core.iml" filepath="$PROJECT_DIR$/comm/base.core/base.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comm/comm.core/comm.core.iml" filepath="$PROJECT_DIR$/comm/comm.core/comm.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/goods.core/goods.core.iml" filepath="$PROJECT_DIR$/core/goods.core/goods.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vc/goods.vc/goods.vc/goods.vc.iml" filepath="$PROJECT_DIR$/vc/goods.vc/goods.vc/goods.vc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/manage.core/manage.core.iml" filepath="$PROJECT_DIR$/core/manage.core/manage.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/manage.vc.iml" filepath="$PROJECT_DIR$/vc/manage.vc/manage.vc/manage.vc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/order.core/order.core.iml" filepath="$PROJECT_DIR$/core/order.core/order.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vc/order.vc/order.vc/order.vc.iml" filepath="$PROJECT_DIR$/vc/order.vc/order.vc/order.vc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comm/parent/parent.iml" filepath="$PROJECT_DIR$/comm/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/promotion.core/promotion.core.iml" filepath="$PROJECT_DIR$/core/promotion.core/promotion.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vc/promotion.vc/promotion.vc/promotion.vc.iml" filepath="$PROJECT_DIR$/vc/promotion.vc/promotion.vc/promotion.vc.iml" />
     </modules>
   </component>
 </project>

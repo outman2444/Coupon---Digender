@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="manage.vc:war">
+    <output-path>$PROJECT_DIR$/vc/manage.vc/manage.vc/target</output-path>
+    <root id="archive" name="manage.vc-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="manage.vc:war exploded" />
+    </root>
+  </artifact>
+</component>

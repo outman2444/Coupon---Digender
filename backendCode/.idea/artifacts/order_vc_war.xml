@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="order.vc:war">
+    <output-path>$PROJECT_DIR$/vc/order.vc/order.vc/target</output-path>
+    <root id="archive" name="order.vc-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="order.vc:war exploded" />
+    </root>
+  </artifact>
+</component>

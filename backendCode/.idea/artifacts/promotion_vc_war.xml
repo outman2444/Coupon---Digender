@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="promotion.vc:war">
+    <output-path>$PROJECT_DIR$/vc/promotion.vc/promotion.vc/target</output-path>
+    <root id="archive" name="promotion.vc-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="promotion.vc:war exploded" />
+    </root>
+  </artifact>
+</component>
