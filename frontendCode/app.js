@@ -7,20 +7,19 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    ajaxUtil.doPost({
-      url: "hello",
-      params: {
-        name: "outman"
-      },
-    }).then(res => {
-      console.info(res)
-    })
-
     // 登录
     wx.login({
       success: res => {
+        console.info(res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      
+        ajaxUtil.doPost({
+          url: "loginByCode",
+          params: {
+            wxcode: res.code
+          },
+        }).then(res => {
+          console.info(res)
+        })      
       }
     })
     // 获取用户信息

@@ -1,4 +1,6 @@
-package com.couponDigender.comm.core.resp;
+package com.couponDigender.comm.core.enmu;
+
+import lombok.Getter;
 
 /**
  * 接口响应码枚举
@@ -9,8 +11,9 @@ public enum RespCode {
     EXCEPTION(10002 , "请求异常"),
     ;
 
-
+    @Getter
     private int code;
+    @Getter
     private String desc;
 
     RespCode(int code, String desc) {
@@ -18,11 +21,4 @@ public enum RespCode {
         this.desc = desc;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
 }

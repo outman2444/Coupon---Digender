@@ -47,7 +47,8 @@ export const conditionConf = {
  */
 export const urlList = {
   "manage": {
-    "hello":"user/hello"
+    "hello":"user/hello",
+    "loginByCode":"user/loginByCode"
   },
   "goods": {
 
