@@ -10,5 +10,5 @@ public interface UserService {
      * @param userExtModal
      * @return
      */
-    RespData loginByCode(UserExtModal userExtModal);
+    RespData loginByCode(String methodDesc ,UserExtModal userExtModal);
 }

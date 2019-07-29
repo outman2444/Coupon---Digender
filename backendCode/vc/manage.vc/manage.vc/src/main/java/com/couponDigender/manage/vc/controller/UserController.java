@@ -35,6 +35,6 @@ public class UserController extends ExceptionHandle{
     @RequestMapping("/loginByCode")
     public RespData loginByCode(@RequestBody UserExtModal userExtModal) {
         String methodDesc = "通过 wxCode 登陆";
-        return userServiceImpl.loginByCode(userExtModal);
+        return userServiceImpl.loginByCode(methodDesc ,userExtModal);
     }
 }

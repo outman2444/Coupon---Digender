@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.couponDigender")
+@ComponentScan("com.couponDigender")
 @EnableAutoConfiguration
 public class ManageApplication {
 

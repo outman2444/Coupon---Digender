@@ -1,23 +1,27 @@
 package com.couponDigender.manage.core.property;
 
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
 /**
  * 微信配置管理
  */
+@Component
+@Data
 @PropertySource("classpath:application-wx.properties")
 public class WXProperty {
 
     @Value("${wx.appId}")
-    public static final String APPID = null;
+    private String APPID;
 
     @Value("${wx.secret}")
-    public static final String SECRET = null;
+    private String SECRET;
 
-    public interface URL {
+    @Autowired
+    private WXUrlProperty URL;
 
-        @Value("${wx.auth.code2Session}")
-        String CODE_2_SESSION = null;
-    }
 }

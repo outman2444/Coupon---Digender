@@ -2,11 +2,22 @@ package com.couponDigender.manage.core.utils;
 
 import com.couponDigender.manage.core.constant.WXConstant;
 import com.couponDigender.manage.core.property.WXProperty;
+import com.couponDigender.manage.core.property.WXUrlProperty;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 /**
  * 微信工具类
  */
+@Component
 public class WXUtil {
+
+    private static WXProperty wxProperty;
+    @Autowired
+    public void setWxProperty(WXProperty wxProperty) {
+        this.wxProperty = wxProperty;
+    }
 
     /**
      * 获取 code2Session Url
@@ -14,10 +25,10 @@ public class WXUtil {
      * @param code
      * @return
      */
-    public String getCode2SessionUrl(String code) {
-        String url = WXProperty.URL.CODE_2_SESSION;
-        url = url.replace(WXConstant.APPID, WXProperty.APPID);
-        url = url.replace(WXConstant.SECRET, WXProperty.SECRET);
+    public static String getCode2SessionUrl(String code) {
+        String url = wxProperty.getURL().getCODE_2_SESSION();
+        url = url.replace(WXConstant.APPID, wxProperty.getAPPID());
+        url = url.replace(WXConstant.SECRET, wxProperty.getSECRET());
         url = url.replace(WXConstant.COSE, code);
         return url;
     }

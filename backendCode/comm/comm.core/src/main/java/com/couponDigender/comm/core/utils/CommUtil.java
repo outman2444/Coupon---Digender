@@ -27,7 +27,7 @@ public class CommUtil {
      * @param fieldModals
      * @return
      */
-    public RespData validationParam(String methodDesc, Object param, int strategy, FieldModal... fieldModals) {
+    public static RespData validationParam(String methodDesc, Object param, int strategy, FieldModal... fieldModals) {
         try {
             if (methodDesc == null) {
                 throw new RuntimeException("校验参数方法描述为空");

@@ -15,7 +15,7 @@ App({
         ajaxUtil.doPost({
           url: "loginByCode",
           params: {
-            wxcode: res.code
+            wxCode: res.code
           },
         }).then(res => {
           console.info(res)
