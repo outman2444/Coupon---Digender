@@ -1,5 +1,6 @@
 package com.couponDigender.manage.core.serviceImpl;
 
+import com.couponDigender.base.core.dbDao.CDUserDao;
 import com.couponDigender.comm.core.enmu.RespCode;
 import com.couponDigender.comm.core.enmu.ValidateStrategy;
 import com.couponDigender.comm.core.extModal.FieldModal;
@@ -9,10 +10,15 @@ import com.couponDigender.comm.core.utils.HttpUtil;
 import com.couponDigender.manage.core.extModal.UserExtModal;
 import com.couponDigender.manage.core.service.UserService;
 import com.couponDigender.manage.core.utils.WXUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private CDUserDao cdUserDao;
+
     @Override
     public RespData loginByCode(String methodDesc, UserExtModal userExtModal) {
 
@@ -29,6 +35,9 @@ public class UserServiceImpl implements UserService {
         if (httpResp.getRespCode() != RespCode.SUCCESS.getCode()) {
             return httpResp;
         }
+
+        // 如果数据库没有该用户openid 则新加一条记录
+//        cdUserDao.
 
         return httpResp;
     }
