@@ -16,7 +16,7 @@ export const conditionConf = {
   "dev": {
     "protocol": "http",
     "hostAndport": {
-      "manage": "192.168.199.157:10000",
+      "manage": "192.168.0.105:10000",
       "goods": "",
       "order": "",
       "promotion": ""

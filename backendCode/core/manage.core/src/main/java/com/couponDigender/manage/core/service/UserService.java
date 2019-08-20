@@ -11,4 +11,12 @@ public interface UserService {
      * @return
      */
     RespData loginByCode(String methodDesc ,UserExtModal userExtModal);
+
+    /**
+     * 更新用户信息
+     * @param methodDesc
+     * @param userExtModal
+     * @return
+     */
+    RespData updateUserInfo(String methodDesc, UserExtModal userExtModal);
 }
