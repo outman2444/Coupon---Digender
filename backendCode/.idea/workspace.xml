@@ -28,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/serviceImpl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="146">
@@ -38,10 +38,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ManageApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/java/com/couponDigender/manage/vc/ManageApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CDUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbModal/CDUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="352">
               <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -53,7 +63,7 @@
       <file leaf-file-name="CDUserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbDao/CDUserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="154">
               <caret line="7" column="63" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -62,53 +72,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserExtModal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/extModal/UserExtModal.java">
+      <file leaf-file-name="application-wx.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/resources/application-wx.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="220">
+              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Column.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/Column.class">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/goods.core/src/main/java/com/couponDigender/goods/core/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="110">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/core/goods.core/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="97" lean-forward="false" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/BaseApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#312#313#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comm/base.core/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,18 +115,18 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="176">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application-wx.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/resources/application-wx.properties">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="22">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -184,7 +182,6 @@
         <option value="$PROJECT_DIR$/comm/comm.core/src/main/java/com/couponDigender/comm/core/resp/BaseApplication.java" />
         <option value="$PROJECT_DIR$/comm/comm.core/src/main/java/com/couponDigender/comm/core/BaseApplication.java" />
         <option value="$PROJECT_DIR$/core/goods.core/src/main/java/com/couponDigender/goods/core/BaseApplication.java" />
-        <option value="$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/ManageApplication.java" />
         <option value="$PROJECT_DIR$/core/order.core/src/main/java/com/couponDigender/order/core/OrderApplication.java" />
         <option value="$PROJECT_DIR$/core/promotion.core/src/main/java/com/couponDigender/promotion/core/PromotionApplication.java" />
         <option value="$PROJECT_DIR$/core/goods.core/pom.xml" />
@@ -218,6 +215,7 @@
         <option value="$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbModal/CDUser.java" />
         <option value="$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbDao/CDUserDao.java" />
         <option value="$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/serviceImpl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/ManageApplication.java" />
       </list>
     </option>
   </component>
@@ -247,20 +245,20 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="manage.core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="comm.core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="manage.core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="comm.core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="manage.vc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="manage.core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="manage.vc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="manage.core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -305,29 +303,34 @@
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -335,8 +338,8 @@
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -345,30 +348,8 @@
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="dbDao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="dbModal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="base.core" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -376,105 +357,70 @@
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-              <item name="comm.core" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
+              <item name="vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
               <item name="vc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="vc" type="462c0819:PsiDirectoryNode" />
-              <item name="goods.vc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="vc" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="vc" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="vc" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendCode" type="462c0819:PsiDirectoryNode" />
-              <item name="vc" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
-              <item name="manage.vc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backendCode" type="b2602c69:ProjectViewProjectNode" />
@@ -537,7 +483,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BaseApplication">
+  <component name="RunManager" selected="Spring Boot.ManageApplication (1)">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.couponDigender.goods.core.Application" />
@@ -564,6 +510,18 @@
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.couponDigender.goods.vc.GoodsApplication" />
       <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="goods.vc" />
+      <envs />
+    </configuration>
+    <configuration name="ManageApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.couponDigender.manage.vc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.couponDigender.manage.vc.ManageApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="manage.vc" />
       <envs />
     </configuration>
     <configuration name="ManageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -680,7 +638,7 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="8">
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.ParentApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.GoodsApplication" />
@@ -689,10 +647,12 @@
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.OrderApplication" />
       <item index="6" class="java.lang.String" itemvalue="Spring Boot.BaseApplication" />
       <item index="7" class="java.lang.String" itemvalue="Spring Boot.ManageApplication" />
+      <item index="8" class="java.lang.String" itemvalue="Spring Boot.ManageApplication (1)" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.ManageApplication (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -718,12 +678,12 @@
       <workItem from="1564402147220" duration="8053000" />
       <workItem from="1564449275171" duration="99000" />
       <workItem from="1564578328273" duration="6345000" />
-      <workItem from="1566305057799" duration="67000" />
+      <workItem from="1566305057799" duration="1339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39869000" />
+    <option name="totallyTimeSpent" value="41141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -742,13 +702,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910814" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45373467" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3188406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53511703" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2739872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -762,7 +723,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -829,24 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/goods.core/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/goods.core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-575">
           <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/goods.core/src/main/java/com/couponDigender/goods/core/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -875,6 +821,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -897,14 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/ManageApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,13 +876,6 @@
         <state relative-caret-position="264">
           <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -983,17 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/java/com/couponDigender/manage/vc/ManageApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="e#451#452#0" expanded="false" />
-            <element signature="e#510#511#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,22 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/resources/application-wx.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comm/base.core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1012">
@@ -1132,26 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbModal/CDUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbDao/CDUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="63" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/extModal/UserExtModal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1164,6 +1049,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbDao/CDUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="63" lean-forward="false" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/base.core/src/main/java/com/couponDigender/base/core/dbModal/CDUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/goods.core/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/goods.core/src/main/java/com/couponDigender/goods/core/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/java/com/couponDigender/manage/core/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/java/com/couponDigender/manage/vc/ManageApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/manage.core/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vc/manage.vc/manage.vc/src/main/resources/application-wx.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
