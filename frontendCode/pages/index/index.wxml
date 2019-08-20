@@ -1,13 +1,35 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<home wx:if="{{PageCur=='home'}}"></home>
+<recommend wx:if="{{PageCur=='recommend'}}"></recommend>
+<supersearch wx:if="{{PageCur=='supersearch'}}"></supersearch>
+<class wx:if="{{PageCur=='class'}}"></class>
+<my wx:if="{{PageCur=='my'}}"></my>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <image class="cuIcon-emoji  {{PageCur=='home'?'text-orange':'text-gray'}}"></image>
+    </view>
+    <view class="{{PageCur=='home'?'text-orange':'text-gray'}}">首页</view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="action" bindtap="NavChange" data-cur="recommend">
+    <view class='cuIcon-cu-image'>
+      <image class="cuIcon-like  {{PageCur=='recommend'?'text-orange':'text-gray'}}"></image>
+    </view>
+    <view class="{{PageCur=='recommend'?'text-orange':'text-gray'}}">推荐</view>
+  </view>
+  <view class="action text-gray add-action" bindtap="NavChange" data-cur="supersearch">
+    <button class="cu-btn cuIcon-discover bg-orange shadow" ></button>
+    超级搜
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="class">
+    <view class='cuIcon-cu-image'>
+      <image class="cuIcon-list  {{PageCur=='class'?'text-orange':'text-gray'}}"></image>
+    </view>
+    <view class="{{PageCur=='class'?'text-orange':'text-gray'}}">分类</view>
+  </view> 
+  <view class="action" bindtap="NavChange" data-cur="my">
+    <view class='cuIcon-cu-image'>
+      <image class="cuIcon-my  {{PageCur=='my'?'text-orange':'text-gray'}}"></image>
+    </view>
+    <view class="{{PageCur=='my'?'text-orange':'text-gray'}}">我的</view>
   </view>
 </view>

@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "home": "/pages/home/home",
+    "recommend": "/pages/recommend/recommend",
+    "supersearch": "/pages/supersearch/supersearch",
+    "class": "/pages/class/class",
+    "my": "/pages/my/my"
+  }
 }

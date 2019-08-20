@@ -1,0 +1,16 @@
+<!--pages/supersearch/supersearch.wxml-->
+<scroll-view scroll-y class="scrollPage">
+
+  <view class="bg-gradual-red  radius text-center shadow-blur height-250">
+    <view class='padding-top-100'>
+      <view class="text-lg">超级搜</view>
+    </view>
+    <view class="cu-bar search padding-top-50">
+      <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
