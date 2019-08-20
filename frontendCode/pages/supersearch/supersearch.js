@@ -2,63 +2,63 @@
 Page({
 
   /**
-   * Ò³ÃæµÄ³õÊ¼Êý¾Ý
+   * é¡µé¢çš„åˆå§‹æ•°æ®
    */
   data: {
 
   },
 
   /**
-   * ÉúÃüÖÜÆÚº¯Êý--¼àÌýÒ³Ãæ¼ÓÔØ
+   * ç”Ÿå‘½å‘¨æœŸå‡½æ•°--ç›‘å¬é¡µé¢åŠ è½½
    */
   onLoad: function (options) {
 
   },
 
   /**
-   * ÉúÃüÖÜÆÚº¯Êý--¼àÌýÒ³Ãæ³õ´ÎäÖÈ¾Íê³É
+   * ç”Ÿå‘½å‘¨æœŸå‡½æ•°--ç›‘å¬é¡µé¢åˆæ¬¡æ¸²æŸ“å®Œæˆ
    */
   onReady: function () {
 
   },
 
   /**
-   * ÉúÃüÖÜÆÚº¯Êý--¼àÌýÒ³ÃæÏÔÊ¾
+   * ç”Ÿå‘½å‘¨æœŸå‡½æ•°--ç›‘å¬é¡µé¢æ˜¾ç¤º
    */
   onShow: function () {
 
   },
 
   /**
-   * ÉúÃüÖÜÆÚº¯Êý--¼àÌýÒ³ÃæÒþ²Ø
+   * ç”Ÿå‘½å‘¨æœŸå‡½æ•°--ç›‘å¬é¡µé¢éšè—
    */
   onHide: function () {
 
   },
 
   /**
-   * ÉúÃüÖÜÆÚº¯Êý--¼àÌýÒ³ÃæÐ¶ÔØ
+   * ç”Ÿå‘½å‘¨æœŸå‡½æ•°--ç›‘å¬é¡µé¢å¸è½½
    */
   onUnload: function () {
 
   },
 
   /**
-   * Ò³ÃæÏà¹ØÊÂ¼þ´¦Àíº¯Êý--¼àÌýÓÃ»§ÏÂÀ­¶¯×÷
+   * é¡µé¢ç›¸å…³äº‹ä»¶å¤„ç†å‡½æ•°--ç›‘å¬ç”¨æˆ·ä¸‹æ‹‰åŠ¨ä½œ
    */
   onPullDownRefresh: function () {
 
   },
 
   /**
-   * Ò³ÃæÉÏÀ­´¥µ×ÊÂ¼þµÄ´¦Àíº¯Êý
+   * é¡µé¢ä¸Šæ‹‰è§¦åº•äº‹ä»¶çš„å¤„ç†å‡½æ•°
    */
   onReachBottom: function () {
 
   },
 
   /**
-   * ÓÃ»§µã»÷ÓÒÉÏ½Ç·ÖÏí
+   * ç”¨æˆ·ç‚¹å‡»å³ä¸Šè§’åˆ†äº«
    */
   onShareAppMessage: function () {
 
