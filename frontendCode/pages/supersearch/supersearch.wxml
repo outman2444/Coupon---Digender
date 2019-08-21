@@ -1,16 +1,21 @@
 <!--pages/supersearch/supersearch.wxml-->
-<scroll-view scroll-y class="scrollPage">
 
+  <!--  顶部-->
   <view class="bg-gradual-red  radius text-center shadow-blur height-250">
-    <view class='padding-top-100'>
-      <view class="text-lg">超级搜</view>
+    <view class='padding-top-50'>
+      <view class="text-xsl text-shadow text-white">超级搜</view>
     </view>
     <view class="cu-bar search padding-top-50">
       <view class="search-form round">
         <text class="cuIcon-search"></text>
-        <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+        <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtap=''></input>
       </view>
     </view>
+  </view>
+  <scroll-view scroll-y class="scrollPage">
+<!-- 使用教程 -->
+  <view>
+    <image src='http://cmspic.judacdn.com/tkjidicms/cmswap/images2/zhinan.jpg' mode='widthFix'  style='width:100%'></image>
   </view>
 
 </scroll-view>
