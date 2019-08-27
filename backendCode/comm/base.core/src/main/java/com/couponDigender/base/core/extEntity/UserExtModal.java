@@ -1,4 +1,4 @@
-package com.couponDigender.manage.core.extModal;
+package com.couponDigender.base.core.extEntity;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;

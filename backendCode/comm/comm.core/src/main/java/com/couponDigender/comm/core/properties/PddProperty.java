@@ -2,13 +2,14 @@ package com.couponDigender.comm.core.properties;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
 @Data
+@PropertySource("classpath:application-pdd.properties")
 public class PddProperty {
-    @Value("${pdd.url.host}")
-    private String router;
+
 
     @Value("${pdd.clientId}")
     private String clientId;
@@ -16,11 +17,8 @@ public class PddProperty {
     @Value("${pdd.clientSecret}")
     private String clientSecret ;
 
-    @Value("${pdd.code}")
-    private String code ;
-
-    @Value("${pdd.refreshToken}")
-    private String refreshToken ;
+    @Value("${pdd.url.host}")
+    private String host;
 
     @Value("${pdd.url.getCode}")
     private String getCodeUrl;

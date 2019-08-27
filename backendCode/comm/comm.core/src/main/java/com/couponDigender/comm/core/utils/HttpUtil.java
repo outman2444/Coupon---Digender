@@ -41,6 +41,7 @@ public class HttpUtil {
             HttpResponse resp = httpClient.execute(httpGet);
             if (resp.getStatusLine().getStatusCode() == HttpURLConnection.HTTP_OK) {
                 respStr = EntityUtils.toString(resp.getEntity());
+                logger.error("{}请求【{}】成功 --> {}", methodDesc, url, resp);
             } else {
                 logger.error("{}请求【{}】异常 --> {}", methodDesc, url, resp);
                 throw new RuntimeException("请求异常：" + resp);

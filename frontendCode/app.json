@@ -1,20 +1,24 @@
 {
   "pages": [
+    "pages/goodsSearch/goodsSearch",
     "pages/index/index",
+  
     "pages/logs/logs",
     "pages/class/class",
     "pages/home/home",
     "pages/my/my",
     "pages/recommend/recommend",
     "pages/supersearch/supersearch"
+    
   ],
-"window": {
-  "navigationBarBackgroundColor": "#39b54a",
-  "navigationBarTitleText": "Color UI",
-  "navigationStyle": "custom",
-  "navigationBarTextStyle": "white"
-},
-"usingComponents": {
-  "cu-custom": "/colorui/components/cu-custom"
-}
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
 }

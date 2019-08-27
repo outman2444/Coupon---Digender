@@ -1,21 +1,21 @@
 <!--pages/supersearch/supersearch.wxml-->
 
-  <!--  顶部-->
-  <view class="bg-gradual-red  radius text-center shadow-blur height-250">
-    <view class='padding-top-50'>
-      <view class="text-xsl text-shadow text-white">超级搜</view>
-    </view>
-    <view class="cu-bar search padding-top-50">
-      <view class="search-form round">
-        <text class="cuIcon-search"></text>
-        <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtap=''></input>
-      </view>
-    </view>
+<!--  顶部-->
+<view class="bg-gradual-red  radius text-center shadow-blur height-250">
+  <view class='padding-top-50'>
+    <view class="text-xsl text-shadow text-white">超级搜</view>
   </view>
-  <scroll-view scroll-y class="scrollPage">
-<!-- 使用教程 -->
+  <view class="cu-bar search padding-top-50">
+    <navigator class="search-form round" url="../goodsSearch/goodsSearch" open-type="navigate" hover-class="other-navigator-hover">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtap=''></input>
+    </navigator>
+  </view>
+</view>
+<scroll-view scroll-y class="scrollPage">
+  <!-- 使用教程 -->
   <view>
-    <image src='http://cmspic.judacdn.com/tkjidicms/cmswap/images2/zhinan.jpg' mode='widthFix'  style='width:100%'></image>
+    <image src='http://cmspic.judacdn.com/tkjidicms/cmswap/images2/zhinan.jpg' mode='widthFix' style='width:100%'></image>
   </view>
 
 </scroll-view>

@@ -3,7 +3,7 @@ package com.couponDigender.manage.vc.controller;
 import com.couponDigender.comm.core.exception.ExceptionHandle;
 import com.couponDigender.comm.core.enmu.RespCode;
 import com.couponDigender.comm.core.resp.RespData;
-import com.couponDigender.manage.core.extModal.UserExtModal;
+import com.couponDigender.base.core.extEntity.UserExtModal;
 import com.couponDigender.manage.core.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

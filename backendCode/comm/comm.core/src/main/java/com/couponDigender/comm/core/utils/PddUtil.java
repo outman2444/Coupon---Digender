@@ -1,18 +1,27 @@
 package com.couponDigender.comm.core.utils;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.couponDigender.comm.core.properties.PddProperty;
 import com.couponDigender.comm.core.resp.RespData;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.util.DigestUtils;
+import sun.security.provider.MD5;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 /**
  * 拼多多公用工具
  */
 @Data
+@Component
 public class PddUtil {
 
 
@@ -38,6 +47,42 @@ public class PddUtil {
 
         RespData respData = HttpUtil.get(methodDesc, url);
         return respData;
+    }
+
+    public static RespData doRequest(String methodDesc , String type , JSONObject param){
+        String url = pddProperty.getHost();
+
+        param.put("type" , type);
+        param.put("data_type" , "JSON");
+        param.put("timestamp" , System.currentTimeMillis()+"");
+        param.put("client_id" , pddProperty.getClientId());
+        param.put("sign" , getSign(param));
+
+
+        List<String> paramList = param
+                .entrySet()
+                .stream()
+                .map(item -> item.getKey() + "=" + item.getValue())
+                .collect(Collectors.toList());
+        url += "?"+StringUtils.join(paramList.toArray() , "&");
+
+        return HttpUtil.get(methodDesc , url);
+    }
+
+    public static String getSign(JSONObject param){
+        TreeMap<String, Object> treeMap = new TreeMap<>(param);
+
+        List<String> paramList = treeMap
+                .entrySet()
+                .stream()
+                .map(item -> item.getKey() + item.getValue())
+                .collect(Collectors.toList());
+        String join =pddProperty.getClientSecret();
+        join += StringUtils.join(paramList.toArray(), "");
+        join +=pddProperty.getClientSecret();
+        String md5 = DigestUtils.md5DigestAsHex(join.getBytes());
+        md5 = StringUtils.upperCase(md5);
+        return md5;
     }
 
 }

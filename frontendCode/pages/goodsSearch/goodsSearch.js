@@ -1,11 +1,12 @@
-// pages/supersearch/supersearch.js
+// pages/goodsSearch/goodsSearch.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    showHistoryNoList:false
   },
 
   /**
@@ -54,6 +55,41 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  /**
+   * 点击搜索框 显示搜索历史
+   */
+  showHistoryView:function () {
+    this.setData({
+      showHistoryNoList:false,
+    })
+  },
+  /**
+   * 搜索商品
+   */
+  searchGoods:function (){
+    // 隐藏 搜索历史  显示商品列表
+    this.setData({
+      showHistoryNoList: true,
+    })
+
+    // 请求 搜索商品列表
+    app.ajaxUtil.doPost({
+      url: "searchGoods",
+      params: {
+        // wxCode: res.code
+      },
+    }).then(res => {
+      console.info(res)
+    })      
 
   }
 })

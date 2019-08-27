@@ -4,11 +4,13 @@ import com.couponDigender.comm.core.enmu.RespCode;
 import com.couponDigender.comm.core.resp.RespData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
  * 全局统一异常处理
  */
+@Component
 public class ExceptionHandle {
 
     private Logger logger = LoggerFactory.getLogger(ExceptionHandle.class);

@@ -11,14 +11,13 @@ import com.couponDigender.comm.core.extModal.FieldModal;
 import com.couponDigender.comm.core.resp.RespData;
 import com.couponDigender.comm.core.utils.CommUtil;
 import com.couponDigender.comm.core.utils.HttpUtil;
-import com.couponDigender.manage.core.extModal.UserExtModal;
+import com.couponDigender.base.core.extEntity.UserExtModal;
 import com.couponDigender.manage.core.service.UserService;
 import com.couponDigender.manage.core.utils.WXUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Service
 public class UserServiceImpl implements UserService {

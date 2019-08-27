@@ -1,7 +1,7 @@
 package com.couponDigender.manage.core.service;
 
 import com.couponDigender.comm.core.resp.RespData;
-import com.couponDigender.manage.core.extModal.UserExtModal;
+import com.couponDigender.base.core.extEntity.UserExtModal;
 
 public interface UserService {
 
