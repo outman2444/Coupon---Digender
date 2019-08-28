@@ -6,14 +6,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showHistoryNoList:false
+    showView:1 ,// 1. 搜索历史  2. 列表   3. 空数据页面
+    goodsList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.searchGoods()
   },
 
   /**
@@ -69,7 +70,7 @@ Page({
    */
   showHistoryView:function () {
     this.setData({
-      showHistoryNoList:false,
+      showView:1,
     })
   },
   /**
@@ -78,7 +79,7 @@ Page({
   searchGoods:function (){
     // 隐藏 搜索历史  显示商品列表
     this.setData({
-      showHistoryNoList: true,
+      showView: 2,
     })
 
     // 请求 搜索商品列表
@@ -88,7 +89,23 @@ Page({
         // wxCode: res.code
       },
     }).then(res => {
-      console.info(res)
+      let body = JSON.parse(res.body)
+      let list = body.goods_search_response.goods_list;
+      if (list.length <=0){
+        this.setData({
+          showView: 3,
+        })
+      }else{
+        let nowList = this.data.goodsList;
+        list.map((val , index) => {
+          nowList.push(val)
+        })
+        this.setData({
+          goodsList: nowList,
+        })
+      }
+      console.info(this.data.goodsList)
+      
     })      
 
   }

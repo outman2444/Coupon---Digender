@@ -17,9 +17,10 @@
 </view>
 
 <!-- 搜索历史 -->
-<view class="cu-bar margin-top bg-white" hidden="{{showHistoryNoList}}" style="">
+<view class="cu-bar margin-top bg-white" hidden="{{showView != 1}}">
+
   <view class="action">
-    <text class="cuIcon-title text-blue"></text>搜索历史
+    <text class="cuIcon-title text-blue"></text>搜索历史 {{showView != 1}}
   </view>
 </view>
 <view class="grid col-5 padding-sm">
@@ -29,3 +30,31 @@
 </view>
 
 <!-- 搜索列表 -->
+<view class="cu-list grid col-2 no-border" hidden="{{showView != 2}}">
+
+  <view class="cu-item" wx:for="{{goodsList}}" wx:key>
+
+    <view class="cu-card case" style="padding:5px">
+
+      <view class="image">
+        <image src="{{item.goods_image_url}}" mode="scaleToFill" class="height-100"></image>
+        <view class="cu-tag bg-blue">史诗</view>
+      </view>
+
+      <view class="content">
+        <view class="text-black text-sm">{{item.goods_name}}</view>
+        <view class="text-gray text-sm flex justify-left">
+          <text class="cuIcon-shop text-grey " style="font-size:11px;width:10%"></text>
+          <text class="text-grey" style="font-size:11px;width:89%">{{item.mall_name}}</text>
+        </view>
+      </view>
+
+
+    </view>
+  </view>
+</view>
+
+<!-- 空数据view -->
+<view class="cu-list grid col-2 no-border" hidden="{{showView != 3}}">
+  没有数据
+</view>
