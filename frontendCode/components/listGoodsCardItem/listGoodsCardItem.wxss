@@ -1,0 +1,3 @@
+/* components/listGoodsCardItem/listGoodsCardItem.wxss */
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";

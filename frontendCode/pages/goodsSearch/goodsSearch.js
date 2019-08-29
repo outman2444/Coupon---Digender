@@ -6,6 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
     showView:1 ,// 1. 搜索历史  2. 列表   3. 空数据页面
     goodsList:[]
   },
