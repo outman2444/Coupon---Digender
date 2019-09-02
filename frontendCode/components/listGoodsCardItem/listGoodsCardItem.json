@@ -1,4 +1,9 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "van-card": "/vantui/card/index",
+    "van-tag":"/vantui/tag/index",
+    "van-cell":"/vantui/cell/index",
+    "van-icon":"/vantui/icon/index"
+  }
 }

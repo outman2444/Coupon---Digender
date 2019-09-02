@@ -45,20 +45,38 @@ Component({
       type: String,
       value: '返回商品总数',
     },
- 
+    goodsDesc: {
+      type: String,
+      value: '商品描述',
+    },
+    minGroupPrice: {
+      type: String,
+      value: '原价',
+    },
+    hasMallCoupon: {
+      type: String,
+      value: '是否有券',
+    },
+
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    merchantTypeName: ["", "个人", "企业", "旗舰店", "专卖店", "专营店", "普通店"]
+    merchantTypeName: ["", "精选", "企业", "旗舰店", "专卖店", "专营店", "精选"],
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+     textSpilt:function (text){
+       console.info("截取")
+       if(text.length > 60){
+         return text.substring(0, 60)+"..."
+       }
 
+     }
   }
 })

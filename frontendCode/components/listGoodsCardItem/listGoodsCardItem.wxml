@@ -1,50 +1,14 @@
 <!--components/listGoodsCardItem/listGoodsCardItem.wxml-->
-<!-- <view class="padding-lr bg-white margin-top ">
-  <view class="flex">
+<van-card num="2" tag="{{merchantTypeName[merchantType]}}" price="{{(minGroupPrice - couponDiscount)/100}}" origin-price="{{minGroupPrice/100}}" title="{{goodsName}}" thumb="{{ goodsThumbnailUrl }}" num="{{totalCount}}" lazy-load="true">
 
-    <view class="cu-card case  flex-sub">
-      <view class="image ">
-        <image src="{{goodsThumbnailUrl}}" mode="widthFix"></image>
-        <view class="cu-tag bg-red text-sm">{{merchantTypeName[merchantType]}}</view>
-        <view class="cu-bar bg-shadeBottom">
-          <text class="text-cut text-sm">我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。</text>
-        </view>
-      </view>
-    </view>
-
-    <view class="flex-twice ">
-      <view class="flex">
-        <text class="text-cut   " style="width:220px">{{goodsName}}</text>
-      </view>
-      <view class="flex">
-        <text class="text-cut   " style="width:220px">{{goodsName}}</text>
-      </view>
-      <view class="flex">
-        <text class="text-cut   " style="width:220px">{{goodsName}}</text>
-      </view>
-      <view class="flex">
-        <text class="text-cut   " style="width:220px">{{goodsName}}</text>
-      </view>
-
-    </view>
+  <view slot="desc">
+    <van-icon name="shop-o" />  
+    <text style="font-size:10px;color:grey;padding-left:3px;text-align:center;vertical-align:middle">{{mallName}} </text>
   </view>
-</view> -->
-
-<view class="cu-card article {{isCard?'no-card':''}}">
-  <view class="cu-item shadow">
-    <!-- <view class="title">
-      <view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
-    </view> -->
-    <view class="content no-padding ">
-      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
-      <view class="desc">
-        <view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
-        <view>
-          <view class="cu-tag bg-red light sm round">正义天使</view>
-          <view class="cu-tag bg-green light sm round">史诗</view>
-        </view>
-      </view>
-    </view>
+  <view slot="tags">
+    <van-tag plain type="danger" style="padding-left:5px;" wx:if="{{hasMallCoupon}}">{{couponDiscount/100}}元优惠券</van-tag>
+    <van-tag plain type="danger" style="padding-left:5px;" wx:if="{{promotionRate*(minGroupPrice - couponDiscount)/100/1000 >0.02}}">返利{{promotionRate*(minGroupPrice - couponDiscount)/100/1000}}元</van-tag>
+    <van-tag plain type="danger" style="padding-left:5px;">已售{{salesTip}}</van-tag>
   </view>
-</view>
+</van-card>
 <slot></slot>
