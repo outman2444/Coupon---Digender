@@ -1,0 +1,49 @@
+/* components/swatoothBor/swatoothBor.wxss */
+
+.sawtooth-bor {
+  display: flex;
+  padding-left: 5px;
+  color: #fff;
+  box-sizing: border-box;
+  background: radial-gradient(transparent 0, transparent 4px, #ffb937 4px);
+  background-size: 15px 14px;
+  background-position: 8px 0px;
+  background-color: #fff;
+}
+
+.discount {
+  border-right: 1px dashed #f5f5f5;
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  background-color: #ffb937;
+}
+
+.sawtooth-bor {
+  display: flex;
+  padding-left: 5px;
+  color: #fff;
+  box-sizing: border-box;
+  background: radial-gradient(transparent 0, transparent 4px, #ffb937 4px);
+  background-size: 15px 14px;
+  background-position: 8px 0px;
+  background-color: #fff;
+}
+
+.discount {
+  border-right: 1px dashed #f5f5f5;
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  background-color: #ffb937;
+}
+
+.receive {
+  text-align: center;
+  width: 102px;
+  line-height: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  margin-right: 5px;
+  background-color: #ffb937;
+}

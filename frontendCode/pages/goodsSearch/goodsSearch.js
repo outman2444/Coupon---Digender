@@ -8,77 +8,77 @@ Page({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    showView:1 ,// 1. 搜索历史  2. 列表   3. 空数据页面
-    goodsList:[]
+    showView: 1, // 1. 搜索历史  2. 列表   3. 空数据页面
+    goodsList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.searchGoods()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
   /**
    * 点击搜索框 显示搜索历史
    */
-  showHistoryView:function () {
+  showHistoryView: function() {
     this.setData({
-      showView:1,
+      showView: 1,
     })
   },
   /**
    * 搜索商品
    */
-  searchGoods:function (){
+  searchGoods: function() {
     // 隐藏 搜索历史  显示商品列表
     this.setData({
       showView: 2,
@@ -93,13 +93,13 @@ Page({
     }).then(res => {
       let body = JSON.parse(res.body)
       let list = body.goods_search_response.goods_list;
-      if (list.length <=0){
+      if (list.length <= 0) {
         this.setData({
           showView: 3,
         })
-      }else{
+      } else {
         let nowList = this.data.goodsList;
-        list.map((val , index) => {
+        list.map((val, index) => {
           nowList.push(val)
         })
         this.setData({
@@ -107,8 +107,21 @@ Page({
         })
       }
       console.info(this.data.goodsList)
-      
-    })      
+
+    })
+
+  },
+  /**
+   * 跳转商品详情页
+   */
+  toGoodsDetail: function(event) {
+    console.info(event)
+    let goodsid = event.target.dataset.goodsid
+    console.info("商品ID->" + goodsid)
+    wx.navigateTo({
+      url: '/pages/goodsDetail/goodsDetail?goodsid=' + goodsid,
+    })
 
   }
+
 })

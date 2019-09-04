@@ -25,4 +25,16 @@ public class GoodsController {
          String methodDesc = "搜索商品";
         return goodsServiceImpl.search(methodDesc , goodsExtModal);
     }
+
+    /**
+     * 商品详情
+     * @param goodsExtModal
+     * @return
+     */
+    @RequestMapping("detail")
+    public RespData detail(@RequestBody GoodsExtModal goodsExtModal){
+        String methodDesc = "商品详情";
+        return goodsServiceImpl.detail(methodDesc , goodsExtModal);
+    }
+
 }

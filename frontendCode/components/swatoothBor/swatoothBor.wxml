@@ -1,0 +1,10 @@
+<!--components/swatoothBor/swatoothBor.wxml-->
+ <view class="sawtooth-bor item">
+      <view class="pt10 discount">
+        <text class="">50</text>
+        <view class="">满498使用</view>
+        <view class="">有效期2018.03.16-2018.05.31</view>
+      </view>
+      <view class="textc receive">立即领取</view>
+    </view>
+<slot></slot>

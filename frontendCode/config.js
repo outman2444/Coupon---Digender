@@ -51,7 +51,8 @@ export const urlList = {
     "loginByCode":"user/loginByCode"
   },
   "goods": {
-    "searchGoods":"goods/search"
+    "searchGoods":"goods/search",
+    "goodsDetail": "goods/detail"
   },
   "order": {
 

@@ -12,4 +12,12 @@ public interface GoodsService {
      * @return
      */
     RespData search(String methodDesc, GoodsExtModal goodsExtModal);
+
+    /**
+     * 商品详情
+     * @param methodDesc
+     * @param goodsExtModal
+     * @return
+     */
+    RespData detail(String methodDesc, GoodsExtModal goodsExtModal);
 }

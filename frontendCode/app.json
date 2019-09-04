@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/goodsDetail/goodsDetail",
     "pages/goodsSearch/goodsSearch",
+    
     "pages/index/index",
     
-    
-  
     "pages/logs/logs",
     "pages/class/class",
     "pages/home/home",

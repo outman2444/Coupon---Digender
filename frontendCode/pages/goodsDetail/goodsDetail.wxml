@@ -1,0 +1,59 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<!-- 顶部抬头 -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}">
+  <view slot="content">宝贝详情</view>
+</cu-custom>
+
+<!-- 商品轮播图 -->
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{goods_details.goods_gallery_urls}}" wx:key>
+    <image src="{{item}}" mode="aspectFill"></image>
+    <video src="{{item}}" autoplay loop muted show-play-btn="{{true}}" controls="{{true}}" objectFit="cover"></video>
+  </swiper-item>
+</swiper>
+
+<!-- 商品内容 -->
+<van-panel>
+  <view slot="header">
+    <!-- 现价 原价    销量 -->
+    <view class=" cf padding-5">
+      <view class=" fl padding-sm">
+        <van-tag mark type="danger">优惠价</van-tag>
+        <text class="text-price text-red text-xl text-bold padding-left-5">{{goods_details.min_group_price/100}}</text>
+        <text class=" text-sm text-grey padding-left-5">原价</text>
+        <text class="text-price text-grey text-sm">{{goods_details.min_normal_price/100}}</text>
+      </view>
+      <view class="  fr padding-sm text-grey text-sm">已售{{goods_details.sales_tip}}件</view>
+    </view>
+  </view>
+  <!-- 商品名称 -->
+  <view class="padding-5">
+    <text class=" text-black text-bold ">{{goods_details.goods_name}}</text>
+    <van-tag mark type="danger" class="padding-left-5">{{serviceTagName[goods_details.service_tags[0]]}}</van-tag>
+  </view>
+
+  <!-- 补贴券 -->
+
+  <!-- 优惠券 -->
+  <view class="padding-10">
+    <swatoothBor></swatoothBor>
+    <view class="padding-top-5"></view>
+    <swatoothBor></swatoothBor>
+  </view>
+
+
+  <!-- 服务 -->
+  <view class="padding-5">
+    <text class="text-grey text-sm" wx:for="{{goods_details.service_tags}}"> * {{serviceTagName[item]}}</text>
+  </view>
+
+</van-panel>
+
+
+<!-- 底部导航栏 -->
+<van-goods-action>
+  <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
+  <van-goods-action-button text="加入购物车" type="warning" bind:click="onClickButton" />
+  <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+</van-goods-action>

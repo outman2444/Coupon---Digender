@@ -1,6 +1,5 @@
 <!--components/listGoodsCardItem/listGoodsCardItem.wxml-->
 <van-card num="2" tag="{{merchantTypeName[merchantType]}}" price="{{(minGroupPrice - couponDiscount)/100}}" origin-price="{{minGroupPrice/100}}" title="{{goodsName}}" thumb="{{ goodsThumbnailUrl }}" num="{{totalCount}}" lazy-load="true">
-
   <view slot="desc">
     <van-icon name="shop-o" />  
     <text style="font-size:10px;color:grey;padding-left:3px;text-align:center;vertical-align:middle">{{mallName}} </text>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-goods-action": "/vantui/goods-action/index",
+    "van-goods-action-icon": "/vantui/goods-action-icon/index",
+    "van-goods-action-button": "/vantui/goods-action-button/index",
+    "van-panel": "/vantui/panel/index",
+    "van-tag": "/vantui/tag/index",
+    "swatoothBor":"/components/swatoothBor/swatoothBor"
+  }
+}

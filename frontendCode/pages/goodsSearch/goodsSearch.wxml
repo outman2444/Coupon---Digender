@@ -9,7 +9,7 @@
 <view class="cu-bar search bg-white">
   <view class="search-form round">
     <text class="cuIcon-search"></text>
-    <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindblur="showHistoryView"></input>
+    <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtouchstart="showHistoryView"></input>
   </view>
   <view class="action">
     <button class="cu-btn bg-red shadow-blur round" bindtap="searchGoods">搜索</button>
@@ -37,6 +37,8 @@
     sales-tip="{{item.sales_tip}}" activity-type="{{item.activity_type}}" clt-cpn-discount="{{item.clt_cpn_discount}}"
     total-count="{{item.total_count}}"    goods-desc="{{ item.goods_desc}}" min-group-price="{{item.min_group_price}}"
     has-mall-coupon = "{{item.has_mall_coupon}}"
+    data-goodsId="{{item.goods_id}}"
+    bindtap="toGoodsDetail"
     />
   </view>
 

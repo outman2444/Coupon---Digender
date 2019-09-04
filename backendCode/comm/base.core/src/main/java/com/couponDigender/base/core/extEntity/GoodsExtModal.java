@@ -68,8 +68,8 @@ public class GoodsExtModal implements Serializable {
     @TableField("NUM_CLT_CPN_DISCOUNT")
     private Integer numCltCpnDiscount;
 
-    @TableField("NUM_GOOD_ID")
-    private Integer numGoodId;
+    @TableField("VC2_GOOD_ID")
+    private String vc2GoodId;
 
     @TableField("VC2_GOODS_GALLERY_URLS")
     private String vc2GoodsGalleryUrls;
