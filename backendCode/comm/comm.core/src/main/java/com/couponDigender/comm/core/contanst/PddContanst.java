@@ -15,4 +15,10 @@ public class PddContanst {
      */
     public static String goodsDetailUrlType = "pdd.ddk.goods.detail";
 
+    /**
+     * 创建推广位
+     */
+    public static String createPromotionPosition = "pdd.ddk.goods.pid.generate";
+
+
 }

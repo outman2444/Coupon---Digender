@@ -32,28 +32,29 @@
     <van-tag mark type="danger" class="padding-left-5">{{serviceTagName[goods_details.service_tags[0]]}}</van-tag>
   </view>
 
-  <!-- 补贴券 -->
-
   <!-- 优惠券 -->
-  <view class="padding-10">
-    <swatoothBor></swatoothBor>
-    <view class="padding-top-5"></view>
-    <swatoothBor></swatoothBor>
+  <view class="padding-5">
+    <swatoothBor coupon-discount="{{goods_details.coupon_discount}}" coupon-remain-quantity='{{goods_details.coupon_remain_quantity}}' coupon-total-quantity='{{goods_details.coupon_total_quantity}}' coupon-start-time='{{goods_details.coupon_start_time}}'
+      coupon-end-time='{{goods_details.coupon_end_time}}' />
   </view>
-
 
   <!-- 服务 -->
   <view class="padding-5">
     <text class="text-grey text-sm" wx:for="{{goods_details.service_tags}}"> * {{serviceTagName[item]}}</text>
   </view>
 
+  <!-- 商品详情 -->
+  <view class="">
+    <van-cell title="店铺名称" icon="shop-o" label="{{goods_details.mall_name}}" />
+    <van-cell title="商品分类" icon="send-gift-o" label="{{goods_details.category_name}}" />
+    <van-cell title="商品描述" icon="more-o" label="{{goods_details.goods_desc}}" />
+  </view>
 </van-panel>
 
 
 <!-- 底部导航栏 -->
 <van-goods-action>
-  <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
-  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
-  <van-goods-action-button text="加入购物车" type="warning" bind:click="onClickButton" />
-  <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+  <van-goods-action-icon icon="like-o" text="收藏" bind:click="onClickIcon" />
+  <van-goods-action-button text="分享赚({{goods_details.promotion_rate*(goods_details.min_group_price - goods_details.coupon_discount)/100/1000}}元)" type="warning" bind:click="onClickButton" />
+  <van-goods-action-button text="领券买(省{{goods_details.promotion_rate*(goods_details.min_group_price - goods_details.coupon_discount)/100/1000}}元)" bind:click="onClickButton" />
 </van-goods-action>
