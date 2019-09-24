@@ -1,9 +1,12 @@
 package com.couponDigender.manage.vc.controller;
 
+import com.couponDigender.base.core.extEntity.GoodsExtModal;
 import com.couponDigender.comm.core.exception.ExceptionHandle;
 import com.couponDigender.comm.core.enmu.RespCode;
 import com.couponDigender.comm.core.resp.RespData;
 import com.couponDigender.base.core.extEntity.UserExtModal;
+import com.couponDigender.manage.core.RrmoteService.GoodsRemoteService;
+import com.couponDigender.manage.core.RrmoteService.PromotionRemoteService;
 import com.couponDigender.manage.core.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,10 +26,15 @@ public class UserController extends ExceptionHandle{
     @Autowired
     private UserService userServiceImpl;
 
-    @GetMapping("/hello")
+    @Autowired
+    private GoodsRemoteService goodsRemoteService;
+
+    @RequestMapping("/hello")
     @ApiOperation(value = "测试swagger" , notes = "测试接口 ， 测试swagger" )
     @ApiParam(required = true , name = "userExtModal"  , value = "用户参数封装实体")
     public RespData hello(@RequestBody UserExtModal userExtModal) {
+        RespData search = goodsRemoteService.search(new GoodsExtModal());
+        System.out.println(search);
         String methodDesc = "微笑";
         return RespData.org(RespCode.SUCCESS.getCode(), methodDesc + "成功", "hello " + userExtModal.getName());
     }

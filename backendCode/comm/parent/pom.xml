@@ -31,8 +31,9 @@
         <module>../../vc/promotion.vc/promotion.vc</module>
 	</modules>
 
-	<dependencies>
 
+
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>

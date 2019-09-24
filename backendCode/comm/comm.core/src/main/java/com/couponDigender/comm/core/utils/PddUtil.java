@@ -11,10 +11,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.DigestUtils;
 import sun.security.provider.MD5;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.net.URLEncoder;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -26,6 +24,7 @@ public class PddUtil {
 
 
     private static PddProperty pddProperty;
+
     @Autowired
     public void setPddProperty(PddProperty pddProperty) {
         this.pddProperty = pddProperty;
@@ -33,43 +32,60 @@ public class PddUtil {
 
     /**
      * 获取授权码
+     *
      * @return
      */
-    public static RespData getCode(){
+    public static RespData getCode() {
         String methodDesc = "获取code";
 
         List<String> reqBody = new ArrayList<>();
         reqBody.add(pddProperty.getGetCodeUrl());
-        reqBody.add("client_id="+pddProperty.getClientId());
-        reqBody.add("redirect_uri="+pddProperty.getRedirectUri());
+        reqBody.add("client_id=" + pddProperty.getClientId());
+        reqBody.add("redirect_uri=" + pddProperty.getRedirectUri());
 
-        String url = StringUtils.join(reqBody.toArray() , "&");
+        String url = StringUtils.join(reqBody.toArray(), "&");
 
         RespData respData = HttpUtil.get(methodDesc, url);
         return respData;
     }
 
-    public static RespData doRequest(String methodDesc , String type , JSONObject param){
+    public static RespData doRequest(String methodDesc, String type, JSONObject param) {
         String url = pddProperty.getHost();
 
-        param.put("type" , type);
-        param.put("data_type" , "JSON");
-        param.put("timestamp" , System.currentTimeMillis()+"");
-        param.put("client_id" , pddProperty.getClientId());
-        param.put("sign" , getSign(param));
+        // 将参数中list参数转换
+        param
+                .entrySet()
+                .stream()
+                .filter(entry ->
+                        entry.getValue().getClass().getSuperclass() == AbstractList.class)
+                .forEach(entry -> {
+                    String valueStr = "";
+                    List<Object> valueList = (List<Object>) entry.getValue();
+                    List<String> newvalueList = valueList
+                            .stream()
+                            .map(vitem -> "'" + String.valueOf(vitem) + "'")
+                            .collect(Collectors.toList());
+                    valueStr = newvalueList.toString();
+                    param.put(entry.getKey(), valueStr);
+                });
 
+        param.put("type", type);
+        param.put("data_type", "JSON");
+        param.put("timestamp", System.currentTimeMillis() + "");
+        param.put("client_id", pddProperty.getClientId());
+        param.put("sign", getSign(param));
 
         List<String> paramList = param
                 .entrySet()
                 .stream()
                 .map(item -> item.getKey() + "=" + item.getValue())
                 .collect(Collectors.toList());
-        url += "?"+StringUtils.join(paramList.toArray() , "&");
+        url += "?" + StringUtils.join(paramList.toArray(), "&");
 
-        return HttpUtil.get(methodDesc , url);
+        return HttpUtil.get(methodDesc, url);
     }
 
-    public static String getSign(JSONObject param){
+    public static String getSign(JSONObject param) {
         TreeMap<String, Object> treeMap = new TreeMap<>(param);
 
         List<String> paramList = treeMap
@@ -77,9 +93,9 @@ public class PddUtil {
                 .stream()
                 .map(item -> item.getKey() + item.getValue())
                 .collect(Collectors.toList());
-        String join =pddProperty.getClientSecret();
+        String join = pddProperty.getClientSecret();
         join += StringUtils.join(paramList.toArray(), "");
-        join +=pddProperty.getClientSecret();
+        join += pddProperty.getClientSecret();
         String md5 = DigestUtils.md5DigestAsHex(join.getBytes());
         md5 = StringUtils.upperCase(md5);
         return md5;

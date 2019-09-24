@@ -35,7 +35,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let goodsid = options.goodsid || "" + "7293210543"
+    let goodsid = options.goodsid || "" + "16910971023"
     console.info("商品ID ->" + goodsid)
     app.ajaxUtil.doPost({
       url: "goodsDetail",

@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/index/index",
     "pages/goodsDetail/goodsDetail",
     "pages/goodsSearch/goodsSearch",
     
@@ -8,7 +8,7 @@
     
     
     
-    "pages/index/index",
+    
     
     "pages/logs/logs",
     "pages/class/class",

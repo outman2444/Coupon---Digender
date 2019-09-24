@@ -20,5 +20,10 @@ public class PddContanst {
      */
     public static String createPromotionPosition = "pdd.ddk.goods.pid.generate";
 
+    /**
+     * 查询已经生成的推广位
+     */
+    public static String queryPromotionPosition = "pdd.ddk.goods.pid.query";
+
 
 }

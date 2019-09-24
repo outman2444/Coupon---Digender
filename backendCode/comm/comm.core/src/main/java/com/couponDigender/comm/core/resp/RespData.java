@@ -24,6 +24,9 @@ public class RespData {
         this.message = message;
         this.body = body;
     }
+    public RespData(){
+
+    }
 
     /**
      * 组织响应体

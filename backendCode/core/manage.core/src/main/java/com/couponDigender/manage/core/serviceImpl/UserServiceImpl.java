@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.couponDigender.base.core.entity.CdUser;
+import com.couponDigender.base.core.extEntity.PromotionExtModal;
 import com.couponDigender.base.core.mapper.CdUserMapper;
 import com.couponDigender.comm.core.enmu.RespCode;
 import com.couponDigender.comm.core.enmu.ValidateStrategy;
@@ -12,6 +13,8 @@ import com.couponDigender.comm.core.resp.RespData;
 import com.couponDigender.comm.core.utils.CommUtil;
 import com.couponDigender.comm.core.utils.HttpUtil;
 import com.couponDigender.base.core.extEntity.UserExtModal;
+import com.couponDigender.manage.core.RrmoteService.GoodsRemoteService;
+import com.couponDigender.manage.core.RrmoteService.PromotionRemoteService;
 import com.couponDigender.manage.core.service.UserService;
 import com.couponDigender.manage.core.utils.WXUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +27,11 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private CdUserMapper cdUserMapper;
+
+    @Autowired
+    private GoodsRemoteService goodsRemoteService;
+    @Autowired
+    private PromotionRemoteService promotionRemoteServicel;
 
     @Override
     public RespData loginByCode(String methodDesc, UserExtModal userExtModal) {
@@ -41,14 +49,14 @@ public class UserServiceImpl implements UserService {
         if (httpResp.getRespCode() != RespCode.SUCCESS.getCode()) {
             return httpResp;
         }
-        JSONObject jsonBody = JSONObject.parseObject(httpResp.getBody().toString().replace("\"" , "'"));
+        JSONObject jsonBody = JSONObject.parseObject(httpResp.getBody().toString().replace("\"", "'"));
         String openid = jsonBody.getString("openid");
 
         // 如果数据库没有该用户openid 则新加一条记录
         QueryWrapper<CdUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("VC2_OPEN_ID" , openid);
+        queryWrapper.eq("VC2_OPEN_ID", openid);
         Integer count = cdUserMapper.selectCount(queryWrapper);
-        if(count == 0){
+        if (count == 0) {
             CdUser cdUser = new CdUser();
             cdUser.setVc2OpenId(openid);
             cdUser.setDatCreateTime(LocalDateTime.now());
@@ -81,8 +89,17 @@ public class UserServiceImpl implements UserService {
         cdUser.setDatUpdateTime(LocalDateTime.now());
 
         UpdateWrapper updateWrapper = new UpdateWrapper();
-        updateWrapper.eq("VC2_OPEN_ID" , userExtModal.getOpenId());
-        cdUserMapper.update(cdUser , updateWrapper);
-        return RespData.org(RespCode.SUCCESS.getCode() , methodDesc+"成功");
+        updateWrapper.eq("VC2_OPEN_ID", userExtModal.getOpenId());
+        cdUserMapper.update(cdUser, updateWrapper);
+
+        // 为用户创建多多进宝推广位
+        PromotionExtModal promotionExtModal = new PromotionExtModal();
+        promotionExtModal.setVc2OpenId(userExtModal.getOpenId());
+        RespData createGenerateResp = promotionRemoteServicel.createGenerate(promotionExtModal);
+        if (createGenerateResp.getRespCode() != RespCode.SUCCESS.getCode()) {
+            return createGenerateResp;
+        }
+
+        return RespData.org(RespCode.SUCCESS.getCode(), methodDesc + "成功");
     }
 }
