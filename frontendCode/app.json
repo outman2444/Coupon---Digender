@@ -1,12 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/goodsDetail/goodsDetail",
     "pages/goodsSearch/goodsSearch",
-    
-    
-    
-    
+    "pages/goodsDetail/goodsDetail",
     
     
     
@@ -27,5 +23,8 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList":[
+    "wx32540bd863b27570"
+  ]
 }

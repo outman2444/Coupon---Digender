@@ -63,7 +63,14 @@ public class PddUtil {
                     List<Object> valueList = (List<Object>) entry.getValue();
                     List<String> newvalueList = valueList
                             .stream()
-                            .map(vitem -> "'" + String.valueOf(vitem) + "'")
+                            .filter(vItem -> vItem != null)
+                            .map(vitem -> {
+                                String vItemStr = String.valueOf(vitem);
+                                if(vItemStr.matches("\\d*")){
+                                    return vItemStr;
+                                }
+                                return "'" + String.valueOf(vitem) + "'";
+                            })
                             .collect(Collectors.toList());
                     valueStr = newvalueList.toString();
                     param.put(entry.getKey(), valueStr);

@@ -95,6 +95,7 @@ public class UserServiceImpl implements UserService {
         // 为用户创建多多进宝推广位
         PromotionExtModal promotionExtModal = new PromotionExtModal();
         promotionExtModal.setVc2OpenId(userExtModal.getOpenId());
+        promotionExtModal.setFromOpenId(userExtModal.getFromOpenId());
         RespData createGenerateResp = promotionRemoteServicel.createGenerate(promotionExtModal);
         if (createGenerateResp.getRespCode() != RespCode.SUCCESS.getCode()) {
             return createGenerateResp;

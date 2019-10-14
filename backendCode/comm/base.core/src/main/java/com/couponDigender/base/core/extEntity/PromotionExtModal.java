@@ -45,6 +45,11 @@ public class PromotionExtModal implements Serializable {
     @ApiModelProperty(value = "逻辑删除")
     private Integer numDelFlag;
 
+    @ApiModelProperty(value = "商品ID")
+    private String vc2GoodId;
+
+    private String fromOpenId;
+
 
 }
 

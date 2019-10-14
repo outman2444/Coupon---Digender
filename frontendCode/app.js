@@ -80,13 +80,22 @@ App({
         name: 'white',
         color: '#ffffff'
       },
-    ]
+    ],
+    normalSceneList: [1001, 1005, 1006, 1007, 1027]
   },
-  onLaunch: function() {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+  onLaunch: function(e) {
+    console.info("app方法参数")
+    console.info(e)
+
+    // 获取系统信息
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        let custom = wx.getMenuButtonBoundingClientRect();
+        this.globalData.Custom = custom;
+        this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+      }
+    })
 
     // 登录
     wx.login({
@@ -104,24 +113,26 @@ App({
           this.globalData.openId =body.openid
 
           // 更新用户信息
-          this.updateUserInfo()
+            this.updateUserInfo(e.scene)
+          
         })
       }
     })
    
-    wx.getSystemInfo({
-      success: e => {
-        this.globalData.StatusBar = e.statusBarHeight;
-        let custom = wx.getMenuButtonBoundingClientRect();
-        this.globalData.Custom = custom;
-        this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
-      }
-    })
+    
+
+  
   },
   /**
    * 更新用户信息
    */
-  updateUserInfo: function() {
+  updateUserInfo: function (scene, fromOpenId) {
+
+    // 判断场景值  延时更新用户信息
+    console.info("更i性能->>" + this.globalData.normalSceneList.indexOf(scene))
+    if (this.globalData.normalSceneList.indexOf(scene) != -1) {
+      return false;
+    }
 
     // 获取用户信息
     wx.getSetting({
@@ -151,12 +162,14 @@ App({
                   language: res.userInfo.language,
                   nickName: res.userInfo.nickName,
                   province: res.userInfo.province,
-                  openId: this.globalData.openId
+                  openId: this.globalData.openId,
+                  fromOpenId: fromOpenId
                 },
               }).then(res => {
                 console.info(res)
               })      
               console.info("结束执行更新用户信息")
+              
             }
           })
         }

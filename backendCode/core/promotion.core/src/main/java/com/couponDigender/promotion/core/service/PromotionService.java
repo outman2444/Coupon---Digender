@@ -12,4 +12,12 @@ public interface PromotionService {
      * @return
      */
     RespData createGenerate(String methodDesc, PromotionExtModal promotionExtModal);
+
+    /**
+     * 领取优惠券   创建推广链接
+     * @param methodDesc
+     * @param promotionExtModal
+     * @return
+     */
+    RespData takeCoupons(String methodDesc, PromotionExtModal promotionExtModal);
 }

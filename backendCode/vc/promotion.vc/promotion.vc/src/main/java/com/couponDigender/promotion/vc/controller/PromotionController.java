@@ -19,9 +19,20 @@ public class PromotionController {
 
     @RequestMapping("/createGenerate")
     @ApiOperation(value = "创建多多进宝推广位" , notes = "创建多多进宝推广位" )
-    @ApiParam(required = true , name = "userExtModal"  , value = "用户参数封装实体")
+    @ApiParam(required = true , name = "promotionExtModal"  , value = "推广参数封装实体")
     public RespData createGenerate(@RequestBody PromotionExtModal promotionExtModal) {
         String methodDesc = "创建多多进宝推广位";
         return promotionServiceImpl.createGenerate(methodDesc , promotionExtModal);
     }
+
+    @RequestMapping("/takeCoupons")
+    @ApiOperation(value = "领取优惠券，获取推广连接" , notes = "领取优惠券，获取推广连接" )
+    @ApiParam(required = true , name = "promotionExtModal"  , value = "推广参数封装实体")
+    public RespData takeCoupons(@RequestBody PromotionExtModal promotionExtModal) {
+        String methodDesc = "领取优惠券";
+        return promotionServiceImpl.takeCoupons(methodDesc , promotionExtModal);
+    }
+
+
+
 }

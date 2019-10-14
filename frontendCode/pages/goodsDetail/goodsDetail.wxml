@@ -35,7 +35,7 @@
   <!-- 优惠券 -->
   <view class="padding-5">
     <swatoothBor coupon-discount="{{goods_details.coupon_discount}}" coupon-remain-quantity='{{goods_details.coupon_remain_quantity}}' coupon-total-quantity='{{goods_details.coupon_total_quantity}}' coupon-start-time='{{goods_details.coupon_start_time}}'
-      coupon-end-time='{{goods_details.coupon_end_time}}' />
+      coupon-end-time='{{goods_details.coupon_end_time}}' bindtap='takeCoupons' />
   </view>
 
   <!-- 服务 -->
@@ -54,7 +54,17 @@
 
 <!-- 底部导航栏 -->
 <van-goods-action>
-  <van-goods-action-icon icon="like-o" text="收藏" bind:click="onClickIcon" />
-  <van-goods-action-button text="分享赚({{goods_details.promotion_rate*(goods_details.min_group_price - goods_details.coupon_discount)/100/1000}}元)" type="warning" bind:click="onClickButton" />
-  <van-goods-action-button text="领券买(省{{goods_details.promotion_rate*(goods_details.min_group_price - goods_details.coupon_discount)/100/1000}}元)" bind:click="onClickButton" />
+  <van-goods-action-icon icon="like{{goods_collect?'':'-o'}}" icon-class="{{goods_collect?'text-red':''}}" text-class="{{goods_collect?'text-red':''}}" text="收藏" bind:click="goodsCollection" />
+  <van-goods-action-button text="分享赚({{goods_details.promotion_rate*(goods_details.min_group_price - goods_details.coupon_discount)/100/1000}}元)" type="warning" open-type="share" />
+  <van-goods-action-button text="领券买(省{{goods_details.promotion_rate*(goods_details.min_group_price - goods_details.coupon_discount)/100/1000}}元)" bind:click="takeCoupons" />
 </van-goods-action>
+
+
+<van-dialog use-slot show="{{ van_dialog_show }}">
+  <view class="flex-sub text-center">
+      <view class="solid-bottom text-xsl padding">
+        <text class=" cuIcon-likefill text-red"></text>
+      </view>
+      <view class="padding">{{van_dialog_text}}</view>
+    </view>
+</van-dialog>

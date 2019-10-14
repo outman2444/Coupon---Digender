@@ -1,2 +1,77 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<scroll-view scroll-y class="scrollPage">
+  <!-- 顶部抬头 -->
+  <cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}">
+    <view slot="content">我的</view>
+  </cu-custom>
+
+  <!-- 用户信息 -->
+  <view class="cu-list menu-avatar">
+    <view class="cu-item">
+      <view class="cu-avatar round lg" style="background-image:url({{userInfo.avatarUrl}});"></view>
+      <view class="content">
+
+        <view class="text-grey" hidden="{{userInfo.nickName == '' ? true:false}}">{{userInfo.nickName}}</view>
+        <button open-type="getUserInfo" hidden="{{userInfo.nickName != null ? true:false}}" bindgetuserinfo="getUserInfo"> 授权获取头像昵称 </button>
+      
+      </view>
+    </view>
+  </view>
+
+  <!-- 用户佣金信息 -->
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{saveingAmount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-goods"></text> 节省金额</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{promotionAmount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-friend"></text> 推广佣金</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">{{totalAmount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-moneybag"></text> 佣金总计</view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/weilanwl/ColorUI">
+        <text class="cuIcon-like text-red"></text>
+        <text class="text-grey">我的收藏</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/about/about" hover-class="none">
+        <text class="cuIcon-order text-yellow"></text>
+        <text class="text-grey">我的订单</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+        <text class="cuIcon-moneybag text-green"></text>
+        <text class="text-grey">我的佣金</text>
+      </navigator>
+    </view>
+     <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+        <text class="cuIcon-friend text-blue"></text>
+        <text class="text-grey">我的团队</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content"   open-type="share" data-params-title="{{shareTitle}}" data-params-imageUrl="{{shareImageUrl}}"  data-params-openId="{{openId}}">
+        <text class="cuIcon-share text-mauve"></text>
+        <text class="text-grey">推广赚佣 </text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content"  open-type="feedback">
+        <text class="cuIcon-comment text-brown"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

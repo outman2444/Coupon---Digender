@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.couponDigender.base.core.extmapper.CdGoodsExtMapper">
+
+    <select id="querySearchHistory" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            *, count(VC2_KEY_WORD) AS SEARCH_COUNT
+        FROM
+            cd_user_search_history
+        WHERE
+            VC2_OPEN_ID = #{vc2OpenId}
+        GROUP BY
+            VC2_KEY_WORD
+        ORDER BY
+            SEARCH_COUNT DESC
+        LIMIT 15
+    </select>
+
+</mapper>

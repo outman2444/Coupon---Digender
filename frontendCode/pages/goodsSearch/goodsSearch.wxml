@@ -5,41 +5,53 @@
   <view slot="content">超级搜</view>
 </cu-custom>
 
-<!-- 搜索框 -->
-<view class="cu-bar search bg-white">
-  <view class="search-form round">
-    <text class="cuIcon-search"></text>
-    <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtouchstart="showHistoryView"></input>
+<!-- 头部吸顶 -->
+<van-sticky offset-top="{{ CustomBar }}">
+  <!-- 搜索框 -->
+  <view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtouchstart="showHistoryView" bindinput="goodsNameInput" value="{{goodsNameInput}}"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-red shadow-blur round" bindtap="btnsearchGoods">搜索</button>
+    </view>
   </view>
-  <view class="action">
-    <button class="cu-btn bg-red shadow-blur round" bindtap="searchGoods">搜索</button>
+  <!-- 筛选栏 -->
+  <view class=" align-center bg-white padding-top-10 padding-bottom-10">
+    <van-button icon='award-o' type="danger" plain='{{!sortType[0]}}' size="small" class="padding-left-2" data-type='0' bindtap="selectSearchBarBtn">综合排序</van-button>
+    <van-button icon='balance-pay' type="danger" plain='{{!sortType[2]}}' size="small" class="padding-left-2" data-type='2' bindtap="selectSearchBarBtn">佣金最高</van-button>
+    <van-button icon='hot-o' type="danger" plain='{{!sortType[6]}}' size="small" class="padding-left-2" data-type='6' bindtap="selectSearchBarBtn">销量最高</van-button>
+    <van-button icon='flag-o' type="danger" plain='{{!sortType[8]}}' size="small" class="padding-left-2" data-type='8' bindtap="selectSearchBarBtn">优惠最高</van-button>
   </view>
-</view>
+</van-sticky>
+
+
 
 <!-- 搜索历史 -->
-<view class="cu-bar margin-top bg-white" hidden="{{showView != 1}}">
+<view class=" margin-top padding-bottom-10 bg-white" hidden="{{showView != 1}}">
 
-  <view class="action">
-    <text class="cuIcon-title text-blue"></text>搜索历史
-  </view>
-</view>
-<view class="grid col-5 padding-sm">
-  <view class="margin-tb-sm text-center" wx:for="{{ColorList}}" wx:key wx:if="{{item.name!='white'}}">
-    <button class="cu-btn round line{{bordersize?bordersize:''}}-{{item.name}} {{shadow?'shadow':''}}">{{item.title}}</button>
-  </view>
+  <van-cell>
+    <view slot="title">
+      <text class="cuIcon-title text-blue"></text>搜索历史
+    </view>
+  </van-cell>
+
+  <van-grid column-num="3" >
+    <van-grid-item wx:for="{{ historyList }}" use-slot>
+        <view class="text-cut padding-5 bg-gradual-red radius text-center" style="width:100%" bindtap="setSearchText" data-text="{{item.VC2_KEY_WORD}}">{{item.VC2_KEY_WORD}}</view>
+    </van-grid-item>
+  </van-grid>
+
 </view>
 
 <!-- 搜索列表 -->
 <view class="cu-list menu-avatar" hidden="{{showView != 2}}">
 
   <view wx:for="{{goodsList}}">
-    <goodsListItem mall-name="{{item.mall_name}}" goods-name="{{item.goods_name}}" goods-thumbnail-url="{{item.goods_thumbnail_url}}"  merchant-type='{{item.merchant_type}}' coupon-discount="{{item.coupon_discount}}" promotion-rate="{{item.promotion_rate}}"
-    sales-tip="{{item.sales_tip}}" activity-type="{{item.activity_type}}" clt-cpn-discount="{{item.clt_cpn_discount}}"
-    total-count="{{item.total_count}}"    goods-desc="{{ item.goods_desc}}" min-group-price="{{item.min_group_price}}"
-    has-mall-coupon = "{{item.has_mall_coupon}}"
-    data-goodsId="{{item.goods_id}}"
-    bindtap="toGoodsDetail"
-    />
+    <goodsListItem mall-name="{{item.mall_name}}" goods-name="{{item.goods_name}}" goods-thumbnail-url="{{item.goods_thumbnail_url}}" merchant-type='{{item.merchant_type}}' coupon-discount="{{item.coupon_discount}}" promotion-rate="{{item.promotion_rate}}"
+      sales-tip="{{item.sales_tip}}" activity-type="{{item.activity_type}}" clt-cpn-discount="{{item.clt_cpn_discount}}" total-count="{{item.total_count}}" goods-desc="{{ item.goods_desc}}" min-group-price="{{item.min_group_price}}" has-mall-coupon="{{item.has_mall_coupon}}"
+      data-goodsId="{{item.goods_id}}" bindtap="toGoodsDetail" />
   </view>
 
 </view>

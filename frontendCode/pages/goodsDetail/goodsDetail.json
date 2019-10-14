@@ -6,6 +6,9 @@
     "van-panel": "/vantui/panel/index",
     "van-tag": "/vantui/tag/index",
     "swatoothBor":"/components/swatoothBor/swatoothBor",
-    "van-cell": "/vantui/cell/index"
+    "van-cell": "/vantui/cell/index",
+    "van-popup": "/vantui/popup/index",
+    "van-dialog": "/vantui/dialog/index",
+    "van-icon": "/vantui/icon/index"
   }
 }

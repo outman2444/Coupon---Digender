@@ -8,7 +8,7 @@
   <view class="cu-bar search padding-top-50">
     <navigator class="search-form round" url="../goodsSearch/goodsSearch" open-type="navigate" hover-class="other-navigator-hover">
       <text class="cuIcon-search"></text>
-      <input type="text" placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtap=''></input>
+      <input type="text" disabled placeholder="搜索淘宝、天猫、拼多多、京东宝贝名称" confirm-type="search" bindtap=''></input>
     </navigator>
   </view>
 </view>

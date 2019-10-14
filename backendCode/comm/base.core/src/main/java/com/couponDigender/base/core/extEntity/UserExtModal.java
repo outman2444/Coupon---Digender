@@ -41,4 +41,6 @@ public class UserExtModal {
     @ApiModelProperty(value = "省份")
     String province;
 
+    String fromOpenId;
+
 }

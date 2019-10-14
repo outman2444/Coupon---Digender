@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,22 +33,22 @@ public class PromotionServiceImpl implements PromotionService {
     public RespData createGenerate(String methodDesc, PromotionExtModal promotionExtModal) {
 
         // 参数验证
-        RespData valiDateResp = CommUtil.validationParam(methodDesc,promotionExtModal, ValidateStrategy.Positive.getStrategy(),
-                new FieldModal("vc2OpenId" , "用户OpenId")
+        RespData valiDateResp = CommUtil.validationParam(methodDesc, promotionExtModal, ValidateStrategy.Positive.getStrategy(),
+                new FieldModal("vc2OpenId", "用户OpenId")
         );
-        if(valiDateResp.getRespCode() != RespCode.SUCCESS.getCode()){
+        if (valiDateResp.getRespCode() != RespCode.SUCCESS.getCode()) {
             return valiDateResp;
         }
 
         // 如果用户已经有推广位则直接返回 ， 如果过没有则创建之后返回
         QueryWrapper<CdPromotionPosition> queryWrapper = new QueryWrapper();
         queryWrapper.lambda()
-                .eq(CdPromotionPosition::getVc2OpenId , promotionExtModal.getVc2OpenId())
-                .eq(CdPromotionPosition::getNumDelFlag , 0);
+                .eq(CdPromotionPosition::getVc2OpenId, promotionExtModal.getVc2OpenId())
+                .eq(CdPromotionPosition::getNumDelFlag, 0);
         CdPromotionPosition cdPromotionPositions = cdPromotionPositionMapper.selectOne(queryWrapper);
 
-        if(cdPromotionPositions != null){
-            return RespData.org(RespCode.SUCCESS.getCode() , methodDesc+"成功" , cdPromotionPositions);
+        if (cdPromotionPositions != null) {
+            return RespData.org(RespCode.SUCCESS.getCode(), methodDesc + "成功", cdPromotionPositions);
         }
 
         JSONArray nameList = new JSONArray();
@@ -57,10 +58,10 @@ public class PromotionServiceImpl implements PromotionService {
         pIdNameList.add(promotionExtModal.getVc2OpenId());
 
         JSONObject param = new JSONObject();
-        param.put("number" , 1);
-        param.put("p_id_name_list" ,pIdNameList);
+        param.put("number", 1);
+        param.put("p_id_name_list", pIdNameList);
         RespData createGenerateResp = PddUtil.doRequest(methodDesc, PddContanst.createPromotionPosition, param);
-        if(createGenerateResp.getRespCode() != RespCode.SUCCESS.getCode()){
+        if (createGenerateResp.getRespCode() != RespCode.SUCCESS.getCode()) {
             return createGenerateResp;
         }
 
@@ -70,19 +71,19 @@ public class PromotionServiceImpl implements PromotionService {
         JSONObject pIdGenerateResponse;
 
         JSONObject createGenerateRespBody = JSONObject.parseObject(String.valueOf(createGenerateResp.getBody()));
-        if(createGenerateRespBody.get("error_response") !=null){
+        if (createGenerateRespBody.get("error_response") != null) {
             JSONObject error_response = createGenerateRespBody.getJSONObject("error_response");
-            if(!error_response.getString("sub_msg").contains("已经存在")){
-                return RespData.org(RespCode.FAIL.getCode() , methodDesc+"失败",createGenerateRespBody.get("error_response"));
-            }else{
+            if (!error_response.getString("sub_msg").contains("已经存在")) {
+                return RespData.org(RespCode.FAIL.getCode(), methodDesc + "失败", createGenerateRespBody.get("error_response"));
+            } else {
                 // 查询已经生成的推广位信息
-                RespData queryGenerateResp = queryGenerate(methodDesc , promotionExtModal);
-                if(queryGenerateResp.getRespCode() != RespCode.SUCCESS.getCode()){
+                RespData queryGenerateResp = queryGenerate(methodDesc, promotionExtModal);
+                if (queryGenerateResp.getRespCode() != RespCode.SUCCESS.getCode()) {
                     return queryGenerateResp;
                 }
                 pIdGenerateResponse = (JSONObject) queryGenerateResp.getBody();
             }
-        }else{
+        } else {
             pIdGenerateResponse = createGenerateRespBody.getJSONObject("p_id_generate_response");
         }
 
@@ -100,7 +101,7 @@ public class PromotionServiceImpl implements PromotionService {
 
         cdPromotionPositionMapper.insert(cdPromotionPositions);
 
-        return RespData.org(RespCode.SUCCESS.getCode() , methodDesc+"成功" , cdPromotionPositions);
+        return RespData.org(RespCode.SUCCESS.getCode(), methodDesc + "成功", cdPromotionPositions);
 
     }
 
@@ -156,5 +157,47 @@ public class PromotionServiceImpl implements PromotionService {
             page++;
         }
         return RespData.org(RespCode.FAIL.getCode() , methodDesc+"失败,"+promotionExtModal.getVc2OpenId()+"推广位已经生成，但是查询不到信息");
+    }
+
+    @Override
+    public RespData takeCoupons(String methodDesc, PromotionExtModal promotionExtModal) {
+
+        // 参数验证
+        RespData valiDateResp = CommUtil.validationParam(methodDesc,promotionExtModal, ValidateStrategy.Positive.getStrategy(),
+                new FieldModal("vc2OpenId" , "用户OpenId"),
+                new FieldModal("vc2GoodId" , "商品ID")
+        );
+        if(valiDateResp.getRespCode() != RespCode.SUCCESS.getCode()){
+            return valiDateResp;
+        }
+
+        //查询用户推广位
+        QueryWrapper<CdPromotionPosition> queryWrapper = new QueryWrapper<>();
+        queryWrapper
+                .lambda()
+                .eq(CdPromotionPosition::getVc2OpenId , promotionExtModal.getVc2OpenId())
+                .eq(CdPromotionPosition::getNumDelFlag , 0);
+        CdPromotionPosition cdPromotionPosition = cdPromotionPositionMapper.selectOne(queryWrapper);
+
+        // 请求生成推广链接
+        JSONObject param = new JSONObject();
+        param.put("p_id" , cdPromotionPosition.getVc2PPromotionPosition());
+        param.put("goods_id_list" , Arrays.asList(promotionExtModal.getVc2GoodId()));
+        param.put("generate_we_app" , true);
+        RespData createPromotionUrlResp = PddUtil.doRequest(methodDesc, PddContanst.createPromotionUrl, param);
+        if(createPromotionUrlResp.getRespCode() != RespCode.SUCCESS.getCode()){
+            return createPromotionUrlResp;
+        }
+
+        JSONObject createPromotionUrlRespBody = JSONObject.parseObject(String.valueOf(createPromotionUrlResp.getBody()));
+        if(createPromotionUrlRespBody.containsKey("error_response")){
+            return RespData.org(RespCode.FAIL.getCode() , methodDesc+"失败",createPromotionUrlRespBody.get("error_response"));
+        }
+
+        JSONObject goodsPromotionUrlGenerateRespons = createPromotionUrlRespBody.getJSONObject("goods_promotion_url_generate_response");
+        JSONArray goodsPromotionUrlList = goodsPromotionUrlGenerateRespons.getJSONArray("goods_promotion_url_list");
+        JSONObject goodsPromotionUrlList_0 = goodsPromotionUrlList.getJSONObject(0);
+        JSONObject weAppInfo = goodsPromotionUrlList_0.getJSONObject("we_app_info");
+        return RespData.org(RespCode.SUCCESS.getCode() , methodDesc+"成功" , weAppInfo);
     }
 }

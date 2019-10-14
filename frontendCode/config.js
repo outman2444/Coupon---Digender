@@ -16,10 +16,10 @@ export const conditionConf = {
   "dev": {
     "protocol": "http",
     "hostAndport": {
-      "manage": "192.168.0.103:10000",
-      "goods": "192.168.0.103:10001",
-      "order": "192.168.0.103:10002",
-      "promotion": "192.168.0.103:10003"
+      "manage": "192.168.0.111:10000",
+      "goods": "192.168.0.111:10001",
+      "order": "192.168.0.111:10002",
+      "promotion": "192.168.0.111:10003"
     }
   },
   "test": {
@@ -53,12 +53,15 @@ export const urlList = {
   },
   "goods": {
     "searchGoods":"goods/search",
-    "goodsDetail": "goods/detail"
+    "goodsDetail": "goods/detail",
+    "goodsCollection":"goods/collection",
+    "querySearchHistory":"goods/querySearchHistory"
   },
   "order": {
 
   },
   "promotion": {
+    "takeCoupons":"promotion/takeCoupons"
 
   }
 }

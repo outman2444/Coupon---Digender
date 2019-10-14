@@ -1,6 +1,12 @@
 {
   "usingComponents": {
-    "goodsListItem":"/components/listGoodsCardItem/listGoodsCardItem"
-    
+    "goodsListItem":"/components/listGoodsCardItem/listGoodsCardItem",
+    "van-tab": "/vantui//tab/index",
+    "van-tabs": "/vantui/tabs/index",
+    "van-button": "/vantui/button/index",
+    "van-sticky": "/vantui/sticky/index",
+    "van-cell": "/vantui/cell/index",
+    "van-grid": "/vantui/grid/index",
+    "van-grid-item": "/vantui/grid-item/index"
   }
 }

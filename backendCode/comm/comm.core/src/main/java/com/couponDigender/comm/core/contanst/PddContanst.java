@@ -25,5 +25,10 @@ public class PddContanst {
      */
     public static String queryPromotionPosition = "pdd.ddk.goods.pid.query";
 
+    /**
+     * 生成多多进宝推广链接
+     */
+    public static String createPromotionUrl = "pdd.ddk.goods.promotion.url.generate";
+
 
 }

@@ -3,7 +3,6 @@ package com.couponDigender.goods.vc.controller;
 import com.couponDigender.base.core.extEntity.GoodsExtModal;
 import com.couponDigender.comm.core.resp.RespData;
 import com.couponDigender.goods.core.service.GoodsService;
-import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,5 +36,28 @@ public class GoodsController {
         String methodDesc = "商品详情";
         return goodsServiceImpl.detail(methodDesc , goodsExtModal);
     }
+
+    /**
+     * 收藏商品
+     * @param goodsExtModal
+     * @return
+     */
+    @RequestMapping("collection")
+    public RespData collection(@RequestBody GoodsExtModal goodsExtModal){
+        String methodDesc = "收藏商品";
+        return goodsServiceImpl.collection(methodDesc , goodsExtModal);
+    }
+
+    /**
+     * 查询商品搜索历史
+     * @param goodsExtModal
+     * @return
+     */
+    @RequestMapping("querySearchHistory")
+    public RespData querySearchHistory(@RequestBody GoodsExtModal goodsExtModal){
+        String methodDesc = "查询商品搜索历史";
+        return goodsServiceImpl.querySearchHistory(methodDesc , goodsExtModal);
+    }
+
 
 }
