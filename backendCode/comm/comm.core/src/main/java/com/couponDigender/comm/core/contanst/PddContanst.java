@@ -31,4 +31,9 @@ public class PddContanst {
     public static String createPromotionUrl = "pdd.ddk.goods.promotion.url.generate";
 
 
+    /**
+     * 增量获取拼多多订单信息
+     */
+    public static String queryOrderList = "pdd.ddk.order.list.increment.get";
+
 }

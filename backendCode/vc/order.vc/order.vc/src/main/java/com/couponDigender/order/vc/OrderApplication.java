@@ -9,6 +9,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
@@ -17,9 +18,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAutoConfiguration
 @EnableSwagger2
 @PropertySource("classpath:application-order.properties")
-@EnableEurekaServer
-@EnableDiscoveryClient
-@EnableFeignClients(basePackages = "com.couponDigender.**")
+//@EnableEurekaServer
+//@EnableDiscoveryClient
+//@EnableFeignClients(basePackages = "com.couponDigender.**")
+@EnableScheduling
 public class OrderApplication {
 
 	public static void main(String[] args) {

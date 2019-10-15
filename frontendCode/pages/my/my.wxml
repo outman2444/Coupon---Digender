@@ -22,12 +22,12 @@
     <view class="flex flex-sub flex-direction solid-right">
       <view class="text-xxl text-orange">{{saveingAmount}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-goods"></text> 节省金额</view>
+        <text class="cuIcon-goods"></text> 成交金额</view>
     </view>
     <view class="flex flex-sub flex-direction solid-right">
       <view class="text-xxl text-blue">{{promotionAmount}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-friend"></text> 推广佣金</view>
+        <text class="cuIcon-friend"></text> 预估佣金</view>
     </view>
     <view class="flex flex-sub flex-direction">
       <view class="text-xxl text-green">{{totalAmount}}</view>
