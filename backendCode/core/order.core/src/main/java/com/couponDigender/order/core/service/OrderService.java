@@ -12,4 +12,12 @@ public interface OrderService {
      * @return
      */
     RespData crawlingPddOrder(String methodDesc, OrderExtModal queryModal);
+
+    /**
+     * 查询统计信息
+     * @param methodDesc
+     * @param queryModal
+     * @return
+     */
+    RespData queryStatisticsInfo(String methodDesc, OrderExtModal queryModal);
 }

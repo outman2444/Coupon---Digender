@@ -19,10 +19,18 @@ public class OrderController {
 
     @RequestMapping("crawlingPddOrder")
     @ApiOperation(value = "爬取订单" , notes = "爬取订单" )
-    @ApiParam(required = true , name = "promotionExtModal"  , value = "order参数封装实体")
+    @ApiParam(required = true , name = "crawlingPddOrder"  , value = "order参数封装实体")
     public RespData crawlingPddOrder(OrderExtModal queryModal) {
         String methodDesc = "爬取订单";
         return orderServiceImpl.crawlingPddOrder(methodDesc , queryModal);
+    }
+
+    @RequestMapping("queryStatisticsInfo")
+    @ApiOperation(value = "查询统计信息" , notes = "查询统计信息" )
+    @ApiParam(required = true , name = "queryStatisticsInfo"  , value = "order参数封装实体")
+    public RespData queryStatisticsInfo(@RequestBody OrderExtModal queryModal) {
+        String methodDesc = "查询统计信息";
+        return orderServiceImpl.queryStatisticsInfo(methodDesc , queryModal);
     }
 
 }

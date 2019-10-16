@@ -14,7 +14,7 @@ Page({
     console.info(e)
     // 推广人openId
     let fromOpenId = e.openId;
-    app.updateUserInfo(1001,fromOpenId);
+    // app.updateUserInfo(1001,fromOpenId);
 
   },
   /**

@@ -10,22 +10,22 @@
     </view>
     <view class="{{PageCur=='home'?'text-orange':'text-gray'}}">首页</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="recommend">
+  <!-- <view class="action" bindtap="NavChange" data-cur="recommend">
     <view class='cuIcon-cu-image'>
       <image class="cuIcon-like  {{PageCur=='recommend'?'text-orange':'text-gray'}}"></image>
     </view>
     <view class="{{PageCur=='recommend'?'text-orange':'text-gray'}}">推荐</view>
-  </view>
+  </view> -->
   <view class="action text-gray add-action" bindtap="NavChange" data-cur="supersearch">
     <button class="cu-btn cuIcon-discover bg-orange shadow" ></button>
     超级搜
   </view>
-  <view class="action" bindtap="NavChange" data-cur="class">
+  <!-- <view class="action" bindtap="NavChange" data-cur="class">
     <view class='cuIcon-cu-image'>
       <image class="cuIcon-list  {{PageCur=='class'?'text-orange':'text-gray'}}"></image>
     </view>
     <view class="{{PageCur=='class'?'text-orange':'text-gray'}}">分类</view>
-  </view> 
+  </view>  -->
   <view class="action" bindtap="NavChange" data-cur="my">
     <view class='cuIcon-cu-image'>
       <image class="cuIcon-my  {{PageCur=='my'?'text-orange':'text-gray'}}"></image>

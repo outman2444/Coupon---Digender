@@ -58,7 +58,7 @@ export const urlList = {
     "querySearchHistory":"goods/querySearchHistory"
   },
   "order": {
-
+    "queryStatisticsInfo":"order/queryStatisticsInfo"
   },
   "promotion": {
     "takeCoupons":"promotion/takeCoupons"

@@ -130,4 +130,6 @@ public class OrderExtModal {
     @TableField("DAT_CREATE_TIME")
     private LocalDateTime datCreateTime;
 
+    private String vc2OpenId;
+
 }

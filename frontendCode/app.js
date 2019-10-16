@@ -4,7 +4,7 @@ App({
 
   globalData: {
     userInfo: null,
-    openId:null,
+    openId: null,
     ColorList: [{
         title: '嫣红',
         name: 'red',
@@ -109,30 +109,31 @@ App({
           },
         }).then(res => {
           let body = JSON.parse(res.body)
-          console.info("openid -->" + body.openid)    
-          this.globalData.openId =body.openid
+          console.info("openid -->" + body.openid)
+          this.globalData.openId = body.openid
 
           // 更新用户信息
-            this.updateUserInfo(e.scene)
-          
+          this.updateUserInfo(e.scene)
+
         })
       }
     })
-   
-    
 
-  
+
+
+
   },
   /**
    * 更新用户信息
    */
-  updateUserInfo: function (scene, fromOpenId) {
+  updateUserInfo: function(callback) {
 
-    // 判断场景值  延时更新用户信息
-    console.info("更i性能->>" + this.globalData.normalSceneList.indexOf(scene))
-    if (this.globalData.normalSceneList.indexOf(scene) != -1) {
-      return false;
-    }
+    // // 判断场景值  延时更新用户信息
+    // console.info("更新用户信息->>" + this.globalData.normalSceneList.indexOf(scene))
+    // if (this.globalData.normalSceneList.indexOf(scene) == -1) {
+    //   console.info("用户非正常打开场景， 不执行用户信息更新 ,场景值【" + scene+"】")
+    //   return true;
+    // }
 
     // 获取用户信息
     wx.getSetting({
@@ -141,6 +142,7 @@ App({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
+
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
 
@@ -151,7 +153,6 @@ App({
               }
 
               // 更新后台用户信息
-              console.info("开始执行更新用户信息")
               ajaxUtil.doPost({
                 url: "updateUserInfo",
                 params: {
@@ -163,21 +164,26 @@ App({
                   nickName: res.userInfo.nickName,
                   province: res.userInfo.province,
                   openId: this.globalData.openId,
-                  fromOpenId: fromOpenId
                 },
               }).then(res => {
-                console.info(res)
-              })      
-              console.info("结束执行更新用户信息")
-              
+
+                // 用户信息准备完毕   执行回调
+                if (typeof callback === "function")
+                  return callback()
+              })
+
             }
           })
         }
+      },
+      fail: res => {
+        console.info("获取用户授权信息失败")
+        console.info(res)
       }
 
     })
-   
-   
+
+
 
   },
   /**将ajaxUtils 挂在全局 */

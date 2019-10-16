@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.couponDigender.base.core.extmapper.CdOrderExtMapper">
+
+    <select id="queryStatisticsInfo" parameterType="com.couponDigender.base.core.extEntity.OrderExtModal" resultType="com.couponDigender.base.core.entity.CdOrder">
+        SELECT
+            t1.*
+        FROM
+            cd_order t1
+        LEFT JOIN cd_promotion_position t2 ON t1.VC2_P_ID = t2.VC2__P_PROMOTION_POSITION
+        WHERE
+            t2.VC2_OPEN_ID = #{vc2OpenId}
+    </select>
+
+</mapper>

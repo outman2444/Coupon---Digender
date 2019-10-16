@@ -5,10 +5,14 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.couponDigender.base.core.entity.CdOrder;
 import com.couponDigender.base.core.extEntity.OrderExtModal;
+import com.couponDigender.base.core.extmapper.CdOrderExtMapper;
 import com.couponDigender.base.core.mapper.CdOrderMapper;
 import com.couponDigender.comm.core.contanst.PddContanst;
 import com.couponDigender.comm.core.enmu.RespCode;
+import com.couponDigender.comm.core.enmu.ValidateStrategy;
+import com.couponDigender.comm.core.extModal.FieldModal;
 import com.couponDigender.comm.core.resp.RespData;
+import com.couponDigender.comm.core.utils.CommUtil;
 import com.couponDigender.comm.core.utils.LocalDateTimeUtils;
 import com.couponDigender.comm.core.utils.PddUtil;
 import com.couponDigender.order.core.service.OrderService;
@@ -28,6 +32,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private CdOrderMapper cdOrderMapper;
+
+    @Autowired
+    private CdOrderExtMapper cdOrderExtMapper;
 
     @Override
     public RespData crawlingPddOrder(String methodDesc, OrderExtModal queryModal) {
@@ -56,7 +63,7 @@ public class OrderServiceImpl implements OrderService {
         }
 
         for (int day = 0; day <= days; day++) {
-            doCrawlingPddOrder(methodDesc, startTime, endTime , orderIdList);
+            doCrawlingPddOrder(methodDesc, startTime, endTime, orderIdList);
             startTime = startTime.plusDays(1);
             endTime = endTime.plusDays(1);
         }
@@ -65,9 +72,48 @@ public class OrderServiceImpl implements OrderService {
         return RespData.org(RespCode.SUCCESS.getCode(), methodDesc + "成功");
     }
 
+    @Override
+    public RespData queryStatisticsInfo(String methodDesc, OrderExtModal queryModal) {
+
+        // 参数校验
+        RespData validationParamResp = CommUtil.validationParam(methodDesc, queryModal, ValidateStrategy.Positive.getStrategy(),
+                new FieldModal("vc2OpenId", "openId")
+        );
+        if (validationParamResp.getRespCode() != RespCode.SUCCESS.getCode()) {
+            return validationParamResp;
+        }
+
+        List<CdOrder> cdOrderList = cdOrderExtMapper.queryStatisticsInfo(queryModal);
+
+        JSONObject statisticsInfo = new JSONObject();
+
+        // 订单总额
+        statisticsInfo.put("order_amount_totaol", 0);
+
+        // 预估佣金收入
+        statisticsInfo.put("estimate_promotion_amount_totla", 0);
+
+        // 总佣金shu收入
+        statisticsInfo.put("primotion_amount_total", 0);
+
+        cdOrderList.forEach(orderInfo -> {
+
+            statisticsInfo.put("order_amount_totaol", statisticsInfo.getIntValue("order_amount_totaol") + Integer.valueOf(orderInfo.getVc2OrderAmount()));
+
+            if (orderInfo.getNumOrderStatus() == 0 || orderInfo.getNumOrderStatus() == 1 || orderInfo.getNumOrderStatus() == 2 || orderInfo.getNumOrderStatus() == 3)
+                statisticsInfo.put("estimate_promotion_amount_totla", statisticsInfo.getIntValue("estimate_promotion_amount_totla") + Integer.valueOf(orderInfo.getVc2PromotionAmount()));
+
+            statisticsInfo.put("primotion_amount_total", statisticsInfo.getIntValue("primotion_amount_total") + Integer.valueOf(orderInfo.getVc2PromotionAmount()));
+
+        });
+
+        return RespData.org(RespCode.SUCCESS.getCode(), methodDesc + "成功", statisticsInfo);
+    }
+
     /**
      * 执行爬取订单信息
-     *  @param methodDesc
+     *
+     * @param methodDesc
      * @param startTime
      * @param endTime
      * @param orderIdList

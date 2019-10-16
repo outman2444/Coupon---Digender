@@ -9,9 +9,8 @@
     <view class="cu-item">
       <view class="cu-avatar round lg" style="background-image:url({{userInfo.avatarUrl}});"></view>
       <view class="content">
-
-        <view class="text-grey" hidden="{{userInfo.nickName == '' ? true:false}}">{{userInfo.nickName}}</view>
-        <button open-type="getUserInfo" hidden="{{userInfo.nickName != null ? true:false}}" bindgetuserinfo="getUserInfo"> 授权获取头像昵称 </button>
+      
+        <view class="text-grey">{{userInfo.nickName}}</view>
       
       </view>
     </view>
@@ -20,17 +19,17 @@
   <!-- 用户佣金信息 -->
   <view class="padding flex text-center text-grey bg-white shadow-warp">
     <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-orange">{{saveingAmount}}</view>
+      <view class="text-xxl text-orange">{{totalInfo.order_amount_totaol/100}}</view>
       <view class="margin-top-sm">
         <text class="cuIcon-goods"></text> 成交金额</view>
     </view>
     <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-blue">{{promotionAmount}}</view>
+      <view class="text-xxl text-blue">{{totalInfo.estimate_promotion_amount_totla/100}}</view>
       <view class="margin-top-sm">
         <text class="cuIcon-friend"></text> 预估佣金</view>
     </view>
     <view class="flex flex-sub flex-direction">
-      <view class="text-xxl text-green">{{totalAmount}}</view>
+      <view class="text-xxl text-green">{{totalInfo.primotion_amount_total/100}}</view>
       <view class="margin-top-sm">
         <text class="cuIcon-moneybag"></text> 佣金总计</view>
     </view>
